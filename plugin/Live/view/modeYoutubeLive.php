@@ -109,7 +109,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             require "{$global['systemRootPath']}plugin/Live/view/liveVideo.php";
                             ?>
                         </div>  
-                        <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
+                        <div class="col-sm-5 col-md-5 col-lg-4 rightBar" id="yptRightBar">
                         <div class="list-group-item ">
                             <?php
                             echo $sideAd;
