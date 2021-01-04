@@ -115,17 +115,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             ?>
                         </div>
                     </div>
-                        </div>  
-                        <div class="col-md-12">
-                            <center style="margin:5px;">
-                                <?php echo getAdsLeaderBoardTop2(); ?>
-                            </center>
-                        </div>  
-                    </div>
-                    <?php
-                }
-                ?>
-                <div class="row" id="modeYoutubeBottom" style="margin: 0;">
+                    <div class="row" id="modeYoutubeBottom" style="margin: 0;">
                     <div class="col-lg-1"></div>
                     <div class="<?php echo $modeYoutubeBottomClass1; ?>" id="modeYoutubeBottomContent">
                         <?php
@@ -199,6 +189,17 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             </div>
                         </div>
                     </div>
+                        </div>  
+                        <div class="col-md-12">
+                            <center style="margin:5px;">
+                                <?php echo getAdsLeaderBoardTop2(); ?>
+                            </center>
+                        </div>  
+                    </div>
+                    <?php
+                }
+                ?>
+               
                    
                     <div class="col-lg-1"></div>
                 </div>  
