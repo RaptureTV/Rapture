@@ -110,6 +110,7 @@ body .chat{
     border-radius: .4em;
     float: right;
     clear: both;
+    color:white;
 }
 
 .me-bubble:after {
