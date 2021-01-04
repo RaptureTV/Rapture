@@ -1,6 +1,5 @@
 
 .panel {
-    margin-bottom: 0;
     height: calc(100vh - 2px);
     max-height: 100vh;
     position: relative;
