@@ -194,6 +194,7 @@ hgroup{
     border-top-width: 0;
     border-bottom-width: 0;
     border-right-width: 0;
+    background-color: #252525;
 }
 #divRooms{
     transition: all 0.3s;
