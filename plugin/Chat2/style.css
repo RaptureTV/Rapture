@@ -27,6 +27,9 @@ body .panel-footer{
 .emojionearea, .emojionearea-editor{
     font-size: 1.2em;
 }
+.list-group-item {
+    display: none;
+}
 .panel-heading, .list-group-item{
     height: 50px;
 }
