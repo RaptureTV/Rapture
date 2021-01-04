@@ -67,6 +67,9 @@
 .message{
     float: left;
 }
+body .chat{
+    background-color: #252525 !important;
+}
 .messageFooter{
     text-align: right;
     font-size: 0.8em;
@@ -74,9 +77,9 @@
 }
 .them-bubble {
     position: relative;
-    background: #FFF;
     border-radius: .4em;
     float: left;
+    color:white;
     clear: both;
 }
 
