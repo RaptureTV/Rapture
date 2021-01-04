@@ -60,7 +60,7 @@ $isCompressed = AVideoPlugin::loadPluginIfEnabled('TheaterButton') && TheaterBut
 $sideAd = getAdsSideRectangle();
 
 $modeYoutubeBottomClass1 = "col-sm-7 col-md-8 col-lg-9";
-$modeYoutubeBottomClass2 = "col-sm-5 col-md-4 col-lg-3 ";
+$modeYoutubeBottomClass2 = "col-sm-4 col-md-3 col-lg-3 ";
 if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
     $modeYoutubeBottomClass1 = "col-sm-12 col-md-12 col-lg-10";
     $modeYoutubeBottomClass2 = "hidden ";
