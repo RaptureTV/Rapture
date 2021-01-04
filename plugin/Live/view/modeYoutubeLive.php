@@ -88,6 +88,11 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         <?php
         //echo AVideoPlugin::getHeadCode();
         ?>
+        <style>
+        .container-fluid{
+          background-color: #0a0a0a !important;
+        }
+        </style>
     </head>
 
     <body class="<?php echo $global['bodyClass']; ?>">
