@@ -274,3 +274,6 @@ hgroup{
         width: 100%;
     }
 }
+.messageFooter{
+    display:none;
+}
