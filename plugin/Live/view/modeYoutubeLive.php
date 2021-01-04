@@ -104,18 +104,11 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                                 <?php echo getAdsLeaderBoardTop(); ?>
                             </center>
                         </div>  
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <?php
                             require "{$global['systemRootPath']}plugin/Live/view/liveVideo.php";
                             ?>
                         </div>  
-                        <div class="col-sm-4 col-md-4 col-lg-4 rightBar" id="yptRightBar">
-                        <div class="list-group-item ">
-                            <?php
-                            echo $sideAd;
-                            ?>
-                        </div>
-                    </div>
                         <div class="col-md-12">
                             <center style="margin:5px;">
                                 <?php echo getAdsLeaderBoardTop2(); ?>
@@ -137,18 +130,11 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                                         <?php echo getAdsLeaderBoardTop(); ?>
                                     </center>
                                 </div>  
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                     <?php
                                     require "{$global['systemRootPath']}plugin/Live/view/liveVideo.php";
                                     ?>
                                 </div>  
-                                <div class="col-sm-4 col-md-4 col-lg-4 rightBar" id="yptRightBar">
-                        <div class="list-group-item ">
-                            <?php
-                            echo $sideAd;
-                            ?>
-                        </div>
-                    </div>
                                 <div class="col-md-12">
                                     <center style="margin:5px;">
                                         <?php echo getAdsLeaderBoardTop2(); ?>
@@ -206,7 +192,13 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             </div>
                         </div>
                     </div>
-                   
+                    <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
+                        <div class="list-group-item ">
+                            <?php
+                            echo $sideAd;
+                            ?>
+                        </div>
+                    </div>
                     <div class="col-lg-1"></div>
                 </div>  
 
