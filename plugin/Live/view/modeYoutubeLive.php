@@ -212,10 +212,10 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
             ?>
             <script src="<?php echo $global['webSiteRootURL']; ?>js/webui-popover/jquery.webui-popover.min.js" type="text/javascript"></script>
             <script src="<?php echo $global['webSiteRootURL']; ?>js/bootstrap-list-filter/bootstrap-list-filter.min.js" type="text/javascript"></script>
-
     </body>
 </html>
 
 <?php
+//comment
 include $global['systemRootPath'] . 'objects/include_end.php';
 ?>
