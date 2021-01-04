@@ -124,7 +124,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     }
     $(template).find(".messageNameId").html(name);
     $(template).find(".message").html(nl2br(message));
-    $(template).find(".messageFooter").html(messageFooter);
+    // $(template).find(".messageFooter").html(messageFooter);
     if (prepend) {
         $('#chatScreen').prepend(template);
     } else {
