@@ -1,0 +1,12 @@
+#yptchat2 {
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 10px;
+    min-width: 200px !important;
+}
+.yptchat2Fade{
+    display: none;
+}
+#modeYoutubeBottomContent #yptchat2 {
+    height: 330px;
+}

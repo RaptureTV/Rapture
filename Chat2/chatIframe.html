@@ -1,0 +1,127 @@
+<style>
+    #yptchat2{
+        position: fixed;
+        bottom: 0;
+        z-index: 1029; 
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+    }
+    #yptchat2.chat2Minimized{
+        height:50px !important; 
+        width:50px !important;
+        margin: 10px;
+    }
+    #yptchat2Iframe.chat2Minimized{
+        height: 100% !important;
+    }
+    .yptchat2Fade{
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    #yptchat2.chat2Collapsed, 
+    #yptchat2.chat2Collapsed iframe{
+        height: 50px !important;
+    }
+</style>
+<div id="yptchat2" style="display: none; padding: 0;" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+    <iframe 
+        id="yptchat2Iframe"
+        src="{iframeURL}" 
+        frameborder="0" scrolling="no" title="chat widget" class="" 
+        style="
+        outline: none; 
+        visibility: visible; 
+        resize: none; 
+        box-shadow: none; 
+        overflow: visible; 
+        background: none transparent; 
+        opacity: 1; 
+        padding: 0px; 
+        margin: 0px; 
+        transition-property: none; 
+        transform: none; 
+        width: 100%; 
+        z-index: 999999; 
+        cursor: auto; 
+        float: none; 
+        border-radius: unset; 
+        pointer-events: auto; 
+        display: block; 
+        height: calc(100% - 22px);"></iframe>
+</div>
+<script>
+    $(function () {
+        if(typeof Chat2resize !== 'undefined' && Chat2resize){
+            $("#yptchat2").resizable({
+                minHeight: 100,
+                minWidth: 100
+            });
+            $("#yptchat2").draggable({
+            });
+        }
+        if (isYptChat2Minimized()) {
+            collapseChat2();
+        }
+    });
+    function minimizeChat2() {
+        console.log('minimizeChat2');
+        $("#yptchat2, #yptchat2Iframe").addClass('chat2Minimized');
+        $(".yptchat2Fade").fadeOut();
+        collapseChat2();
+    }
+    function maximizeChat2() {
+        console.log('maximizeChat2');
+        $("#yptchat2, #yptchat2Iframe").removeClass('chat2Minimized');
+        $(".yptchat2Fade").fadeIn();
+        expandChat2();
+    }
+    
+    function collapseChat2() {
+        console.log('collapseChat2');
+        $("#yptchat2").addClass('chat2Collapsed');
+        Cookies.set('yptChat2Minimized', true, {
+            path: '/',
+            expires: 365
+        });
+    }
+    function expandChat2() {
+        console.log('expandChat2');
+        $("#yptchat2").removeClass('chat2Collapsed');
+        Cookies.set('yptChat2Minimized', false, {
+            path: '/',
+            expires: 365
+        });
+    }
+
+    function isYptChat2Minimized(){
+        var collapsed = Cookies.get('yptChat2Minimized');
+        if (collapsed === "true" || collapsed === true) {
+            return true;
+        }
+        return false;
+    }
+
+    function closeChat2(){
+        document.getElementById('yptchat2Iframe').contentWindow.minimize();
+    }
+
+    function startIframeChat2(minimazed) {
+        if (minimazed) {
+            try {
+                document.getElementById("yptchat2Iframe").contentWindow.minimize();
+                setTimeout(function () {
+                    $("#yptchat2").fadeIn();
+                }, 500);
+            } catch (e) {
+                setTimeout(function () {
+                    startIframeChat2(minimazed);
+                }, 500);
+            }
+        } else {
+            $("#yptchat2").fadeIn();
+        }
+    }
+</script>
