@@ -296,7 +296,7 @@ echo "var credentialsE = '&{$credentials}';";
                 </div>
                 <div class="<?php echo $chatClassCol2; ?>" style="padding: 0;" id="divChat">
                     <div class="panel panel-default top0Radius" id="chatPanel">
-                        <div class="panel-heading top0Radius" style="display: flex;">
+                        <div class="panel-heading top0Radius" style="none: none;">
                             <div class="pull-left" style="min-width: fit-content;">
                                 <img src="<?php echo $channelOwner->getPhotoDB(); ?>" class="img img-circle img-responsive pull-left" id="talkToImage"> 
 
