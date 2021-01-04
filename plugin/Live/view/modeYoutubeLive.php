@@ -104,7 +104,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                                 <?php echo getAdsLeaderBoardTop(); ?>
                             </center>
                         </div>  
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <?php
                             require "{$global['systemRootPath']}plugin/Live/view/liveVideo.php";
                             ?>
