@@ -125,7 +125,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             ?>
                             <div class="" id="modeYoutubeTop" >
                                 <div class="col-md-12">
-                                    <center style="margin:5px;">
+                                    <center >
                                         <?php echo getAdsLeaderBoardTop(); ?>
                                     </center>
                                 </div>
@@ -135,7 +135,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                                     ?>
                                 </div>
                                 <div class="col-md-12">
-                                    <center style="margin:5px;">
+                                    <center>
                                         <?php echo getAdsLeaderBoardTop2(); ?>
                                     </center>
                                 </div>
