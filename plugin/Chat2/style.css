@@ -55,6 +55,7 @@
 }
 .messageNameId{
     font-weight: bold;
+    float: left;
 }
 
 .isChat .messageNameId{
@@ -62,6 +63,9 @@
 }
 .messageNameId a{
     color :#09d261;
+}
+.message{
+    float: left;
 }
 .messageFooter{
     text-align: right;
