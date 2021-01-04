@@ -60,7 +60,7 @@ $isCompressed = AVideoPlugin::loadPluginIfEnabled('TheaterButton') && TheaterBut
 $sideAd = getAdsSideRectangle();
 
 $modeYoutubeBottomClass1 = "col-sm-7 col-md-7 col-lg-6";
-$modeYoutubeBottomClass2 = "col-sm-5 col-md-5 col-lg-4 ";
+$modeYoutubeBottomClass2 = "col-sm-4 col-md-4 col-lg-4 ";
 if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
     $modeYoutubeBottomClass1 = "col-sm-12 col-md-12 col-lg-10";
     $modeYoutubeBottomClass2 = "hidden ";
@@ -108,6 +108,13 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             <?php
                             require "{$global['systemRootPath']}plugin/Live/view/liveVideo.php";
                             ?>
+                             <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
+                        <div class="list-group-item ">
+                            <?php
+                            echo $sideAd;
+                            ?>
+                        </div>
+                    </div>
                         </div>  
                         <div class="col-md-12">
                             <center style="margin:5px;">
@@ -192,13 +199,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
                             </div>
                         </div>
                     </div>
-                    <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
-                        <div class="list-group-item ">
-                            <?php
-                            echo $sideAd;
-                            ?>
-                        </div>
-                    </div>
+                   
                     <div class="col-lg-1"></div>
                 </div>  
 
