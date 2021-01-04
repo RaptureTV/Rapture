@@ -60,6 +60,9 @@
 .isChat .messageNameId{
     display: none;
 }
+.messageNameId a{
+    color :#09d261;
+}
 .messageFooter{
     text-align: right;
     font-size: 0.8em;
@@ -126,7 +129,7 @@
 hgroup{
     margin: 5px 0;
     padding: 5px 10px;
-    max-width: 80%;
+    max-width: 100%;
     min-width: 20px;
 }
 .badge{
