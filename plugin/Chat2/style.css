@@ -265,9 +265,7 @@ hgroup{
         padding-left: 2px;
     }
 }
-#mvideo{
-    height: 487px;
-}
+
 @media screen and (max-width: 430px) {
     #divChatInput, #divSubmitChat{
         padding: 5px 1px;
