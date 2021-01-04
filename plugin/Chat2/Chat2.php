@@ -65,7 +65,7 @@ class Chat2 extends PluginAbstract {
         $obj->positionOnLeft = false;
         $obj->minWidth = '380px';
         $obj->maxWidth = '2000px';
-        $obj->height = '90vh';
+        $obj->height = '70vh';
         $obj->opacityDefault = 90;
         $obj->opacityHover = 100;
         $obj->noFadeoutBallons = false;
