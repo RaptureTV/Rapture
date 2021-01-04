@@ -15,12 +15,13 @@
     left: 0;
     right: 0;
 }
-
+body .panel-footer{
+    background-color: #0c0c0c !important;
+}
 .panel-footer {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: #232323;
     left: 0;
 }
 .emojionearea, .emojionearea-editor{
