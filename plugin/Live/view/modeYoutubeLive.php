@@ -232,8 +232,9 @@ echo PlayerSkins::getStartPlayerJS();
 .btn {
   background-color: #3F3F3F;
   border: none;
+  float: right;
   color: white;
-  padding: 12px 16px;
+  padding: 5px 10px;
   font-size: 16px;
   margin-right: 2px;
   cursor: pointer;
