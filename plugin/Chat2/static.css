@@ -1,6 +1,5 @@
 #yptchat2 {
-    position: relative !important;
-    width: 100% !important;
+    position: fixed !important;
     margin-bottom: 10px;
     min-width: 200px !important;
 }
