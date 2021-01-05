@@ -261,11 +261,11 @@ echo PlayerSkins::getStartPlayerJS();
 
 }
 </style>
-                                <div class="col-xs-4 col-md-6 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2" >
+                                <div class="col-xs-4 col-md-5 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-3 col-md-3 col-sm-3 col-lg-2" >
                                 <button class="btncustom" style="float: right;">Subscribe</button>
                                 </div>
-                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-3" >
+                                <div class="col-xs-5 col-md-4 col-sm-5 col-lg-3" >
                                 <?php echo $subscribe; ?></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
