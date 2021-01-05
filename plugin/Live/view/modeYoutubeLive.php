@@ -277,6 +277,5 @@ echo PlayerSkins::getStartPlayerJS();
 </html>
 
 <?php
-//comment
 include $global['systemRootPath'] . 'objects/include_end.php';
 ?>
