@@ -228,7 +228,7 @@ echo PlayerSkins::getStartPlayerJS();
 
                                 </h1>
                                 <div class="col-xs-8 col-sm-8 col-lg-8"><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-2 col-sm-2 col-lg-2"><?php echo $video['creator1']; ?></div>
+                                <div class="col-xs-2 col-sm-2 col-lg-2"><div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong></strong><br> <?php echo $subscribe ?> </div></div></div>
                                 <div class="col-xs-2 col-sm-2 col-lg-2"><?php echo $video['creator2']; ?></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
