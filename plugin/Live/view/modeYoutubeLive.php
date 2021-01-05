@@ -255,9 +255,11 @@ echo PlayerSkins::getStartPlayerJS();
 }
 .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){
     background-color:#31AB77;
+    color:white;
 }
 .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
     background-color:#31AB77;
+    color:white;
 
 }
 </style>
