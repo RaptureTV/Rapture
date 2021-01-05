@@ -260,10 +260,7 @@ echo PlayerSkins::getStartPlayerJS();
                             ?>
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
                     <div class="col-lg-1"></div>
->>>>>>> 6bf4c353a9323520b990d8e0f8e2c290470d54c5
                 </div>
 
             </div>
