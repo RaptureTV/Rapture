@@ -255,10 +255,11 @@ echo PlayerSkins::getStartPlayerJS();
 }
 </style>
                                 <div class="col-xs-4 col-md-6 col-sm-4 col-lg-8"><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-8 col-md-6 col-sm-8 col-lg-4">
+                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2">
                                 <button class="btn">Subscribe</button>
-                                <div class="btn1">
-                                <?php echo $subscribe; ?></div></div>
+                                </div>
+                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2">
+                                <?php echo $subscribe; ?></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
                                     <div class="col-md-12 watch8-action-buttons text-muted">
