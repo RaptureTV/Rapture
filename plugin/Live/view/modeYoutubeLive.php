@@ -243,8 +243,8 @@ echo PlayerSkins::getStartPlayerJS();
   background-color: #3F3F3F;
 }
 </style>
-                                <div class="col-xs-8 col-sm-8 col-lg-8"><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-4 col-sm-4 col-lg-4">
+                                <div class="col-xs-8 col-sm-4 col-lg-8"><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-4 col-sm-8 col-lg-4">
                                 <button class="btn">Subscribe</button>
 
                                 <?php echo $subscribe; ?></div>
