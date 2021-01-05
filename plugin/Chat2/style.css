@@ -142,8 +142,8 @@ body .chat{
 }
 
 hgroup{
-    margin: 5px 0;
-    padding: 5px 10px;
+    margin: 4px 0;
+    padding: 3px 10px;
     max-width: 100%;
     min-width: 20px;
 }
