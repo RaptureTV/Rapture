@@ -238,17 +238,27 @@ echo PlayerSkins::getStartPlayerJS();
   margin-right: 10px;
   cursor: pointer;
 }
-
+.btn1 {
+  background-color: #31AB77;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
 /* Darker background on mouse-over */
 .btn:hover {
+  background-color: #31AB77;
+}
+.btn1:hover {
   background-color: #3F3F3F;
 }
 </style>
                                 <div class="col-xs-8 col-sm-4 col-lg-8"><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-4 col-sm-8 col-lg-4">
                                 <button class="btn">Subscribe</button>
-
-                                <?php echo $subscribe; ?></div>
+                                <div class="btn1">
+                                <?php echo $subscribe; ?></div></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
                                     <div class="col-md-12 watch8-action-buttons text-muted">
