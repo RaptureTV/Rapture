@@ -33,7 +33,7 @@ body .panel-footer{
     height: 50px;
 }
 .panel-heading img, .panel-body img{
-    width: 30px; 
+    width: 30px;
     height: 30px;
     margin-right: 10px
 }
@@ -41,7 +41,7 @@ body .panel-footer{
     height: 60px;
 }
 #channelItem img{
-    width: 40px; 
+    width: 40px;
     height: 40px;
 }
 .NameIdentification{
@@ -58,7 +58,7 @@ div#chatPanel{
 }
 .list-group-item:hover {
     background-color: #EEE;
-    cursor: pointer; 
+    cursor: pointer;
 }
 .messageNameId{
     font-weight: bold;
@@ -106,10 +106,11 @@ body .chat{
 
 .me-bubble {
     position: relative;
-    background: #dcf8c6;
+    background: #0c0c0c;
     border-radius: .4em;
     float: right;
     clear: both;
+    color:white;
 }
 
 .me-bubble:after {
@@ -245,8 +246,8 @@ hgroup{
     display: inline-block;
 }
 .top0Radius{
-    border-top-width: 0; 
-    border-top-left-radius: 0; 
+    border-top-width: 0;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
@@ -280,7 +281,7 @@ hgroup{
     #divRooms.divRoomsShow{
         left: 0;
     }
-    #divRooms:hover:not(.divRoomsShow) { 
+    #divRooms:hover:not(.divRoomsShow) {
         left: -70px !important;
     }
     #roomButton{
