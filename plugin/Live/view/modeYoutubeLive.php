@@ -235,14 +235,14 @@ echo PlayerSkins::getStartPlayerJS();
   color: white;
   padding: 12px 16px;
   font-size: 16px;
-  margin-right: 10px;
+  margin-right: 2px;
   cursor: pointer;
 }
 .btn1 {
   background-color: #31AB77;
   border: none;
   color: white;
-  padding: 12px 16px;
+  padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -253,12 +253,19 @@ echo PlayerSkins::getStartPlayerJS();
 .btn1:hover {
   background-color: #3F3F3F;
 }
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){
+    background-color:#31AB77;
+}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
+    background-color:#31AB77;
+
+}
 </style>
-                                <div class="col-xs-4 col-md-6 col-sm-4 col-lg-8"><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2">
+                                <div class="col-xs-4 col-md-6 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2" >
                                 <button class="btn">Subscribe</button>
                                 </div>
-                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2">
+                                <div class="col-xs-4 col-md-3 col-sm-4 col-lg-3" >
                                 <?php echo $subscribe; ?></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
