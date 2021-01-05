@@ -123,7 +123,7 @@ class Subscribe {
         }
         return $subscribe;
     }
-    
+
     static function isSubscribed($subscribed_to_user_id, $user_id=0) {
         if(empty($user_id)){
             if(User::isLogged()){
@@ -284,11 +284,11 @@ class Subscribe {
 
     static function getButton($user_id) {
         global $global, $advancedCustom;
-        
+
         if(!empty($advancedCustom->removeSubscribeButton)){
             return "";
         }
-        
+
         $total = static::getTotalSubscribes($user_id);
 
         $subscribe = "<div class=\"btn-group\" >"
@@ -310,10 +310,10 @@ class Subscribe {
             // show unsubscribe Button
             $subscribe = "<div class=\"btn-group\">";
             if(!empty($subs) && $subs['status']==='a'){
-                $subscribe .= "<button class='btn btn-xs subsB subscribeButton{$user_id} subscribed subs{$user_id}'><i class='fas fa-play-circle'></i> <b class='text'>" . __("Subscribed") . "</b></button>";
+                $subscribe .= "<button class='btn btn-xs subsB subscribeButton{$user_id} subscribed subs{$user_id}'><i class='fas fa-play-circle'></i> <b class='text'>" . __("Followed") . "</b></button>";
                 $subscribe .= "<button class='btn btn-xs subsB subscribed subs{$user_id}'><b class='textTotal{$user_id}'>$total</b></button>";
             }else{
-                $subscribe .= "<button class='btn btn-xs subsB subscribeButton{$user_id} subs{$user_id}'><i class='fas fa-play-circle'></i> <b class='text'>" . __("Subscribe") . "</b></button>";
+                $subscribe .= "<button class='btn btn-xs subsB subscribeButton{$user_id} subs{$user_id}'><i class='fas fa-play-circle'></i> <b class='text'>" . __("Follow") . "</b></button>";
                     $subscribe .= "<button class='btn btn-xs subsB subs{$user_id}'><b class='textTotal{$user_id}'>$total</b></button>";
             }
             $subscribe .= "</div>";
@@ -325,10 +325,10 @@ class Subscribe {
                 $notify = 'hidden';
                 $notNotify = '';
             }
-            $subscribe .= '<span class=" notify' . $user_id . ' ' . $notify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs " data-toggle="tooltip" 
+            $subscribe .= '<span class=" notify' . $user_id . ' ' . $notify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs " data-toggle="tooltip"
                                    title="' . __("Stop getting notified for every new video") . '">
                                 <i class="fa fa-bell" ></i>
-                            </button></span><span class=" notNotify' . $user_id . ' ' . $notNotify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs "  data-toggle="tooltip" 
+                            </button></span><span class=" notNotify' . $user_id . ' ' . $notNotify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs "  data-toggle="tooltip"
                                    title="' . __("Get notified for every new video") . '">
                                 <i class="fa fa-bell-slash"></i>
                             </button></span>';
@@ -343,11 +343,11 @@ class Subscribe {
                             email = $('#subscribeEmail{$user_id}').val();
                             subscribe(email, '{$user_id}');
                         });
-                        $('[data-toggle=\"tooltip\"]').tooltip(); 
+                        $('[data-toggle=\"tooltip\"]').tooltip();
                     });
                 </script>";
         }
-        
+
         return $subscribe . $popover . $script;
     }
 
