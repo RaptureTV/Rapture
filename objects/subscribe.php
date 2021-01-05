@@ -295,7 +295,7 @@ class Subscribe {
                 . "<button class='btn btn-xs subsB subs{$user_id} subscribeButton{$user_id}' "
                 . "title=\"" . __("Want to subscribe to this channel?") . "\" "
                 . "data-content=\"" . __("Sign in to subscribe to this channel") . "<hr><center><a class='btn btn-success btn-sm' href='{$global['webSiteRootURL']}user'>" . __("Sign in") . "</a></center>\"  "
-                . "tabindex=\"0\" role=\"button\" data-html=\"true\"  data-toggle=\"popover\" data-placement=\"bottom\" ><i class='fas fa-play-circle'></i> <b class='text'>" . __("Subscribe") . "</b></button>"
+                . "tabindex=\"0\" role=\"button\" data-html=\"true\"  data-toggle=\"popover\" data-placement=\"bottom\" ><i class='fas fa-play-circle'></i> <b class='text'>" . __("Follow") . "</b></button>"
                 . "<button class='btn btn-xs subsB subs{$user_id}'><b class='textTotal{$user_id}'>{$total}</b></button>"
                 . "</div>";
 

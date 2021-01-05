@@ -1,0 +1,17 @@
+#yptchat2 {
+    position: absolute !important;
+    bottom: 0;
+    width: 100px !important;
+    margin: 0;
+}
+#yptchat2Iframe {
+    position: absolute !important;
+    bottom: 0;
+}
+
+.yptchat2Fade{
+    display: none;
+}
+#modeYoutubeBottomContent #yptchat2 {
+    height: 330px !important;
+}

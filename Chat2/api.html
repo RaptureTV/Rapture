@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>API Sample APP for Chat2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" >
+    </head>
+    <body>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="listPrivateMessages-tab" data-toggle="tab" href="#listPrivateMessages" role="tab" aria-controls="listPrivateMessages" aria-selected="true">List private Chat messages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="listPublicMessages-tab" data-toggle="tab" href="#listPublicMessages" role="tab" aria-controls="listPublicMessages" aria-selected="true">List public (Channel) Chat messages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="privateMessage-tab" data-toggle="tab" href="#privateMessage" role="tab" aria-controls="privateMessage" aria-selected="false">Send private message</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="publicMessage-tab" data-toggle="tab" href="#publicMessage" role="tab" aria-controls="publicMessage" aria-selected="false">Send public message to the channel</a>
+            </li>
+            <li class="nav-item pull-right">
+                <a href="../API/info.php" class="nav-link" >More Info About API</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent" style="padding: 10px;">
+            <div class="tab-pane fade show active" id="listPrivateMessages" role="tabpanel" aria-labelledby="listPrivateMessages-tab">
+                <div class="alert alert-info">
+                    This API will retrieve messages that were sent privately to the user in the select box
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="userPrivateMessages">Users</label>
+                        <select class="form-control usersList" id="userPrivateMessages">
+                        </select>
+                    </div>
+                    <button type="button" id="userPrivateMessagesBtn" class="btn btn-primary">Load Messages</button>
+                    <div class="clear clearfix"></div>
+                    <hr>
+                    <code id="userPrivateMessagesCode"></code>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="listPublicMessages" role="tabpanel" aria-labelledby="listPublicMessages-tab">
+                <div class="alert alert-info">
+                    This API will retrieve messages that were sent public to the user's channel in the select box
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="userPublicMessages">User Channel</label>
+                        <select class="form-control usersList" id="userPublicMessages">
+                        </select>
+                    </div>
+                    <button type="button" id="userPublicMessagesBtn" class="btn btn-primary">Load Messages</button>
+                    <div class="clear clearfix"></div>
+                    <hr>
+                    <code id="userPublicMessagesCode"></code>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="privateMessage" role="tabpanel" aria-labelledby="privateMessage-tab">
+
+                <div class="alert alert-info">
+                    This API will private send messages to user
+                </div>
+                <form>
+
+                    <div class="form-group">
+                        <label for="userPrivate">User</label>
+                        <select class="form-control usersList" id="userPrivate">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="chatPrivateMessage">Message</label>
+                        <textarea class="form-control" id="chatPrivateMessage" name="message" rows="3"></textarea>
+                    </div>
+                </form>
+                <button type="button" id="userPrivateBtn" class="btn btn-primary">Send Private Message</button>
+                <div class="clear clearfix"></div>
+                <hr>
+                <code id="userPrivateCode"></code>
+            </div>
+            <div class="tab-pane fade" id="publicMessage" role="tabpanel" aria-labelledby="publicMessage-tab">
+                <div class="alert alert-info">
+                    This API will send messages to user's channel
+                </div>
+                <form>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="userPublic">User</label>
+                            <select class="form-control usersList" id="userPublic">
+                            </select>
+                        </div>
+                        <label for="chatPublicMessage">Message</label>
+                        <textarea class="form-control" id="chatPublicMessage" name="message" rows="3"></textarea>
+                    </div>
+                </form>
+                <button type="button" id="userPublicBtn" class="btn btn-primary">Send Message to the Channel</button>
+                <div class="clear clearfix"></div>
+                <hr>
+                <code id="userPublicCode"></code>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+
+        <script type="text/javascript">
+            function loadUsers() {
+                $.ajax({
+                    url: '../Chat2/api.users.json.php',
+                    success: function (response) {
+                        for (var i in response.users) {
+                            $option = $('<option value="' + response.users[i].id + '">' + response.users[i].identification + '</option>');
+                            $('.usersList').append($option);
+                        }
+                    }
+                });
+            }
+
+            function getPrivateMessages(users_id) {
+                $.ajax({
+                    url: '../API/get.json.php?APIName=chat2_chat&to_users_id=' + users_id,
+                    success: function (response) {
+                        $("#userPrivateMessagesCode").text(JSON.stringify(response));
+                    }
+                });
+            }
+
+            function getPublicMessages(users_id) {
+                $.ajax({
+                    url: '../API/get.json.php?APIName=chat2_room&room_users_id=' + users_id,
+                    success: function (response) {
+                        $("#userPublicMessagesCode").text(JSON.stringify(response));
+                    }
+                });
+            }
+
+            function sendPublicMessages(users_id, message) {
+                $.ajax({
+                    url: '../API/set.json.php?APIName=chat2_message&room_users_id=' + users_id,
+                    data: {message: message},
+                    type: 'post',
+                    success: function (response) {
+                        $("#userPublicCode").text(JSON.stringify(response));
+                    }
+                });
+            }
+
+            function sendPrivateMessages(users_id, message) {
+                $.ajax({
+                    url: '../API/set.json.php?APIName=chat2_message&users_id=' + users_id,
+                    data: {message: message},
+                    type: 'post',
+                    success: function (response) {
+                        $("#userPrivateCode").text(JSON.stringify(response));
+                    }
+                });
+            }
+
+            $(document).ready(function () {
+                loadUsers();
+                $("#userPrivateMessagesBtn").click(function () {
+                    getPrivateMessages($("#userPrivateMessages").val());
+                });
+                $("#userPublicMessagesBtn").click(function () {
+                    getPublicMessages($("#userPublicMessages").val());
+                });
+                $("#userPrivateBtn").click(function () {
+                    sendPrivateMessages($("#userPrivate").val(), $("#chatPrivateMessage").val());
+                });
+                $("#userPublicBtn").click(function () {
+                    sendPublicMessages($("#userPublic").val(), $("#chatPublicMessage").val());
+                });
+            });
+        </script>
+    </body>
+</html>
