@@ -89,6 +89,9 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
                 width: auto;
                 height: auto;
             }
+            .container-fluid{
+                background-color: #000000 !important;
+            }
         </style>
     </head>
     <body class="<?php echo $global['bodyClass']; ?>">
