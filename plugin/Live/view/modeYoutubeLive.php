@@ -45,7 +45,9 @@ if(!empty($_REQUEST['playlists_id_live'])){
 }
 
 
-$video['creator'] = '<div class="pull-left"><img src="' . $liveImg . '" alt="User Photo" class="img img-responsive img-circle" style="max-width: 40px;"/></div><div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong>' . $name . '</strong><br>' . $subscribe . '</div></div>';
+$video['creator'] = '<div class="pull-left"><img src="' . $liveImg . '" alt="User Photo" class="img img-responsive img-circle" style="max-width: 40px;"/></div><div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong>' . $name . '</strong><br></div></div>';
+$video['creator1'] = '<div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong></strong><br>' . $subscribe . '</div></div>';
+$video['creator2'] = '<div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong></strong><br>' . $subscribe . '</div></div>';
 
 $img = "{$global['webSiteRootURL']}plugin/Live/getImage.php?u={$_GET['u']}&format=jpg";
 $imgw = 640;
@@ -225,7 +227,9 @@ echo PlayerSkins::getStartPlayerJS();
                                    <?php echo $liveTitle; ?>
 
                                 </h1>
-                                <div class="col-xs-12 col-sm-12 col-lg-12"><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-8 col-sm-8 col-lg-8"><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-2 col-sm-2 col-lg-2"></div>
+                                <div class="col-xs-2 col-sm-2 col-lg-2"></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
                                     <div class="col-md-12 watch8-action-buttons text-muted">
