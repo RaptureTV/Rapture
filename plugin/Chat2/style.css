@@ -84,7 +84,7 @@ body .chat{
 }
 .them-bubble {
     position: relative;
-    border-radius: .4em;
+    /* border-radius: .4em; */
     float: left;
     color:white;
     clear: both;
