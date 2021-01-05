@@ -92,6 +92,9 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
             .container-fluid{
                 background-color: #000000 !important;
             }
+            .list-group-item{
+                display:none !important;
+            }
         </style>
     </head>
     <body class="<?php echo $global['bodyClass']; ?>">

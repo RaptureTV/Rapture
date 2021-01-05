@@ -27,7 +27,7 @@ body .panel-footer{
     font-size: 1.2em;
 }
 .list-group-item {
-    display: none;
+    display: none !important;
 }
 .panel-heading, .list-group-item{
     height: 50px;
@@ -97,9 +97,9 @@ body .chat{
     top: 50%;
     width: 0;
     height: 0;
-    border: 6px solid transparent;
+    /* border: 6px solid transparent;
     border-right-color: #FFF;
-    border-left: 0;
+    border-left: 0; */
     margin-top: -6px;
     margin-left: -6px;
 }

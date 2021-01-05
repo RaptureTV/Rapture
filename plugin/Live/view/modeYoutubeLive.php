@@ -92,6 +92,9 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         .container-fluid{
           background-color: #000000 !important;
         }
+        .list-group-item{
+            display:none !important;
+        }
         </style>
     </head>
 
