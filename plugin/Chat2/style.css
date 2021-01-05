@@ -250,7 +250,9 @@ hgroup{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-
+#divChatRow #divRooms > div{
+    display: none;
+}
 .emojionearea, .emojionearea.focused {
     border-width: 0;
     background-color: transparent;
