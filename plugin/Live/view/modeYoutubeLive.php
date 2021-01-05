@@ -232,7 +232,6 @@ echo PlayerSkins::getStartPlayerJS();
 .btn {
   background-color: #3F3F3F;
   border: none;
-  float: right;
   color: white;
   padding: 5px 10px;
   font-size: 16px;
@@ -264,7 +263,7 @@ echo PlayerSkins::getStartPlayerJS();
 </style>
                                 <div class="col-xs-4 col-md-6 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2" >
-                                <button class="btn">Subscribe</button>
+                                <button class="btn" style="float: right;">Subscribe</button>
                                 </div>
                                 <div class="col-xs-4 col-md-3 col-sm-4 col-lg-3" >
                                 <?php echo $subscribe; ?></div>
