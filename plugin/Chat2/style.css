@@ -26,6 +26,10 @@ body .panel-footer{
 .emojionearea, .emojionearea-editor{
     font-size: 1.2em;
 }
+#yptchat2{
+    position: fixed !important;
+    width: 24% !important;
+}
 .list-group-item {
     display: none !important;
 }
