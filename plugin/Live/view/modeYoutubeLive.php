@@ -235,6 +235,7 @@ echo PlayerSkins::getStartPlayerJS();
   color: white;
   padding: 12px 16px;
   font-size: 16px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
