@@ -289,7 +289,7 @@ echo "var credentialsE = '&{$credentials}';";
                                 </ul> 
                             </div>
                         </div>
-                        <button id="roomButton" class="btn btn-default btn-xs"><i class="fas fa-users"></i></button>
+                        <!-- <button id="roomButton" class="btn btn-default btn-xs"><i class="fas fa-users"></i></button> -->
                         <?php
                     }
                     ?>
