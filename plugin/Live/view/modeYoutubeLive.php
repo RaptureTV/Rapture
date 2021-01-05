@@ -90,7 +90,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         ?>
         <style>
         .container-fluid{
-          background-color: #0a0a0a !important;
+          background-color: #000000 !important;
         }
         </style>
     </head>
