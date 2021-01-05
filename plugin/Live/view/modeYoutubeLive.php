@@ -229,7 +229,7 @@ echo PlayerSkins::getStartPlayerJS();
 
                                 </h1>
                                 <style>
-.btn {
+.btncustom {
   background-color: #3F3F3F;
   border: none;
   color: white;
@@ -247,7 +247,7 @@ echo PlayerSkins::getStartPlayerJS();
   cursor: pointer;
 }
 /* Darker background on mouse-over */
-.btn:hover {
+.btncustom:hover {
   background-color: #31AB77;
 }
 .btn1:hover {
@@ -263,7 +263,7 @@ echo PlayerSkins::getStartPlayerJS();
 </style>
                                 <div class="col-xs-4 col-md-6 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-4 col-md-3 col-sm-4 col-lg-2" >
-                                <button class="btn" style="float: right;">Subscribe</button>
+                                <button class="btncustom" style="float: right;">Subscribe</button>
                                 </div>
                                 <div class="col-xs-4 col-md-3 col-sm-4 col-lg-3" >
                                 <?php echo $subscribe; ?></div>
