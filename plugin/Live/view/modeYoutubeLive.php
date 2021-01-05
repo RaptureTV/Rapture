@@ -210,7 +210,7 @@ echo PlayerSkins::getStartPlayerJS();
                             <?php
                         }
                         ?>
-                        <div class="panel">
+                        <div class="panel" style="background-color: #000000 !important;">
                             <div class="panel-body">
                                 <h1 itemprop="name">
                                     <?php
@@ -229,7 +229,7 @@ echo PlayerSkins::getStartPlayerJS();
                                 </h1>
                                 <div class="col-xs-8 col-sm-8 col-lg-8"><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-2 col-sm-2 col-lg-2"><button>Subscribe</button></div>
-                                <div class="col-xs-2 col-sm-2 col-lg-2"><?php echo $subscribe; ?></div>
+                                <div class="col-xs-2 col-sm-2 col-lg-2"><button>Subscribe</button><?php echo $subscribe; ?></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
                                     <div class="col-md-12 watch8-action-buttons text-muted">
