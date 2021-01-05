@@ -164,6 +164,7 @@ $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id'])
 </div>
 <script>
 <?php
+//comment
 echo PlayerSkins::getStartPlayerJS();
 ?>
 </script>
