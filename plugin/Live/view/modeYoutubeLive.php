@@ -272,13 +272,13 @@ echo PlayerSkins::getStartPlayerJS();
 @media screen and (min-width: 1367px) {
   .custom1 {
     margin-right: 4%;
-    margin-left : 20%;
+    margin-left : 25%;
   }
 }
 </style>
 <div class="col-md-12 watch8-action-buttons text-muted"></div>
-                                <div class="col-xs-4 col-md-5 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
-                                <div class="col-xs-8 col-md-7 col-sm-8 col-lg-5" >
+                                <div class="col-xs-4 col-md-5 col-sm-4 col-lg-6" ><?php echo $video['creator']; ?></div>
+                                <div class="col-xs-8 col-md-7 col-sm-8 col-lg-6" >
                          <a href="#" class="btn btn-default no-outline custom1" id="shareBtn">
                                                                                   
                          <i class="fas fa-share-alt"></i>
