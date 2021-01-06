@@ -472,7 +472,7 @@ if (typeof gtag !== \"function\") {
             if (!empty($verified)) {
                 
                 $icon = "{$global['systemRootPath']}view/img/verifyicon.png";
-                $mark .= ' <img src="http://157.230.2.203/VOD/view/img/verifyicon.png" style="height:50px;width:50px;" title="' . __("E-mail Verified") . '">';
+                $mark .= ' <img src="http://157.230.2.203/VOD/view/img/verifyicon.png" style="height:30px;width:30px;" title="' . __("E-mail Verified") . '">';
             } else {
                 //return '<i class="fas fa-times-circle text-muted"></i>';
                 $mark .= '';
