@@ -272,7 +272,7 @@ echo PlayerSkins::getStartPlayerJS();
                          <a href="#" class="btn btn-default no-outline" id="shareBtn">
                                             <span class="fa fa-share"></span> <?php echo __("Share"); ?>
                                         </a>
-                                        <button class="btn btn-m" style="float: left; background-color:#3F3F3F;"><i class="fas fa-check-circle"></i>Subscribe</button>
+                                        <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="fas fa-check-circle"></i>Subscribe</button>
                                         <?php echo $subscribe; ?>
                                 </div>
                                
