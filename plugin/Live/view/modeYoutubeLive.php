@@ -265,6 +265,10 @@ echo PlayerSkins::getStartPlayerJS();
     color:white;
 
 }
+.watch8-action-buttons{
+    border-top: 1px solid #333333;
+    width : 105%;
+}
 @media screen and (min-width: 1367px) {
   .custom1 {
     margin-right: 4%;
@@ -272,6 +276,7 @@ echo PlayerSkins::getStartPlayerJS();
   }
 }
 </style>
+<div class="col-md-12 watch8-action-buttons text-muted"></div>
                                 <div class="col-xs-4 col-md-5 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-8 col-md-7 col-sm-8 col-lg-5" >
                          <a href="#" class="btn btn-default no-outline custom1" id="shareBtn">
@@ -291,14 +296,14 @@ echo PlayerSkins::getStartPlayerJS();
                                         <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="fas fa-check-circle"></i>Subscribe</button>
                                         <?php echo $subscribe; ?>
                                 </div>
-                               
+                                <div class="col-md-12 watch8-action-buttons text-muted"></div>
                                 <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
                                 <div class="row">
-                                    <div class="col-md-12 watch8-action-buttons text-muted">
+                                    <!-- <div class="col-md-12 watch8-action-buttons text-muted">
                                       
                                         
                                         <?php echo AVideoPlugin::getWatchActionButton(0); ?>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <?php
                                 $link = Live::getLinkToLiveFromUsers_id($user_id);
