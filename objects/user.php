@@ -470,7 +470,7 @@ if (typeof gtag !== \"function\") {
                 $verified = $_SESSION['user']['emailVerified'];
             }
             if (!empty($verified)) {
-                $mark .= ' <i class="fas fa-check-circle" data-toggle="tooltip" data-placement="bottom" title="' . __("E-mail Verified") . '"></i>';
+                $mark .= ' <i class="fas fa-check-circle" style="color:#31AB77;" data-toggle="tooltip" data-placement="bottom" title="' . __("E-mail Verified") . '"></i>';
             } else {
                 //return '<i class="fas fa-times-circle text-muted"></i>';
                 $mark .= '';
