@@ -270,17 +270,9 @@ echo PlayerSkins::getStartPlayerJS();
                                 <div class="col-xs-4 col-md-5 col-sm-4 col-lg-7" ><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-3 col-md-3 col-sm-3 col-lg-5" >
                          <a href="#" class="btn btn-default no-outline" id="shareBtn">
-                                            <span class="fa fa-share"></span> <?php echo __("Share"); ?>
-                                        </a>
-                                        <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="fas fa-check-circle"></i>Subscribe</button>
-                                        <?php echo $subscribe; ?>
-                                </div>
-                               
-                                <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
-                                <div class="row">
-                                    <div class="col-md-12 watch8-action-buttons text-muted">
-                                      
-                                        <script>
+                                                                                  
+                         <i class="fas fa-share-alt"></i>
+                            <script>
                                             $(document).ready(function () {
                                                 $("#shareDiv").slideUp();
                                                 $("#shareBtn").click(function () {
@@ -290,6 +282,16 @@ echo PlayerSkins::getStartPlayerJS();
                                                 });
                                             });
                                         </script>
+                                        </a>
+                                        <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="fas fa-check-circle"></i>Subscribe</button>
+                                        <?php echo $subscribe; ?>
+                                </div>
+                               
+                                <p><?php echo nl2br(textToLink($liveDescription)); ?></p>
+                                <div class="row">
+                                    <div class="col-md-12 watch8-action-buttons text-muted">
+                                      
+                                        
                                         <?php echo AVideoPlugin::getWatchActionButton(0); ?>
                                     </div>
                                 </div>
