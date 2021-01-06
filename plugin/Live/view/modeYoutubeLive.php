@@ -45,7 +45,7 @@ if(!empty($_REQUEST['playlists_id_live'])){
 }
 
 
-$video['creator'] = '<div class="pull-left"><img src="' . $liveImg . '" alt="User Photo" class="img img-responsive img-circle" style="max-width: 40px;"/></div><div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong>' . $name . '</strong><br></div></div>';
+$video['creator'] = '<div class="pull-left"><img src="' . $liveImg . '" alt="User Photo" class="img img-responsive img-circle" style="max-width: 40px;"/></div><div class="commentDetails" style="margin-left:45px; font-size:25px;"><div class="commenterName text-muted"><strong>' . $name . '</strong><br></div></div>';
 $video['creator1'] = '<div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong></strong><br>' . $subscribe . '</div></div>';
 $video['creator2'] = '<div class="commentDetails" style="margin-left:45px;"><div class="commenterName text-muted"><strong></strong><br>' . $subscribe . '</div></div>';
 
@@ -98,7 +98,6 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
             display:none !important;
         }
         .commenterName{
-            margin-top : 10px;
             margin-left: 10px;
         }
         </style>
