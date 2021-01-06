@@ -470,8 +470,9 @@ if (typeof gtag !== \"function\") {
                 $verified = $_SESSION['user']['emailVerified'];
             }
             if (!empty($verified)) {
+                
                 $icon = "{$global['systemRootPath']}view/img/verifyicon.png";
-                $mark .= ' <img src="'.$icon.'" data-toggle="tooltip" data-placement="bottom" title="' . __("E-mail Verified") . '">';
+                $mark .= ' <img src="http://157.230.2.203/VOD/view/img/verifyicon.png" data-toggle="tooltip" data-placement="bottom" title="' . __("E-mail Verified") . '">';
             } else {
                 //return '<i class="fas fa-times-circle text-muted"></i>';
                 $mark .= '';
