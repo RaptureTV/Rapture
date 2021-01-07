@@ -44,7 +44,7 @@ if (empty($advancedCustom)) {
         </ul> -->
         <?php
     } else {
-        echo $custom;
+        // echo $custom;
     }
     ?>
 </footer>
