@@ -468,7 +468,7 @@ echo "var credentialsE = '&{$credentials}';";
                                 <i class="fas fa-angle-down"></i>
                             </button>
                         </div>
-                        <div class="panel-footer" style="height: 55px;" >
+                        <div class="panel-footer"  >
                             <?php
                             if (!User::isLogged()) {
                                 if (empty($_GET['mobileMode'])) {
