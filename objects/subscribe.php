@@ -348,7 +348,7 @@ class Subscribe {
                 </script>";
         }
 
-        return $subscribe . $popover . $script;
+        return $subscribe . $popover . $script . $notifyicon;
     }
 
     function getSubscriber_users_id() {
