@@ -32,7 +32,6 @@ $u = new User(0, $_GET['u'], false);
 $user_id = $u->getBdId();
 $video['users_id'] = $user_id;
 $subscribe = Subscribe::getButton($user_id);
-$notifyicon = Subscribe::getButton($user_id);
 $name = $u->getNameIdentificationBd();
 $name = "<a href='" . User::getChannelLink($user_id) . "' >{$name} " . User::getEmailVerifiedIcon($user_id) . "</a>";
 
