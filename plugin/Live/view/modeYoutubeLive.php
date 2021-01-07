@@ -316,13 +316,13 @@ echo PlayerSkins::getStartPlayerJS();
                             </div>
                         </div>
                     </div>
-                    <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
+                    <!-- <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
                         <div class="list-group-item ">
                             <?php
                             echo $sideAd;
                             ?>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-1"></div>
                 </div>
 
