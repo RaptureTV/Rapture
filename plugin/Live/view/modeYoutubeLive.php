@@ -98,7 +98,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         .commenterName{
             margin-left: 10px;
         }
-        body .panel-default, body .panel-footer{
+        .panel-footer{
             border-color:#2f2f2f !important;
         }
         </style>
