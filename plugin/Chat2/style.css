@@ -270,7 +270,7 @@ hgroup{
     border-width: 0;
     background-color: #222222;
     width:92%;
-    margin-left: 10px;
+    margin-left: 12px;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
     box-shadow:none;
@@ -310,8 +310,4 @@ hgroup{
 }
 .messageFooter{
     display:none;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6bf4c353a9323520b990d8e0f8e2c290470d54c5
