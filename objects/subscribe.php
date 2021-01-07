@@ -325,7 +325,7 @@ class Subscribe {
                 $notify = 'hidden';
                 $notNotify = '';
             }
-            $notifyicon = '<span class=" notify' . $user_id . ' ' . $notify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs " data-toggle="tooltip"
+            $subscribe .= '<span class=" notify' . $user_id . ' ' . $notify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs " data-toggle="tooltip"
                                    title="' . __("Stop getting notified for every new video") . '">
                                 <i class="fa fa-bell" ></i>
                             </button></span><span class=" notNotify' . $user_id . ' ' . $notNotify . '"><button onclick="toogleNotify' . $user_id . '();" class="btn btn-default btn-xs "  data-toggle="tooltip"
@@ -348,7 +348,7 @@ class Subscribe {
                 </script>";
         }
 
-        return $subscribe . $popover . $script . $notifyicon;
+        return $subscribe . $popover . $script;
     }
 
     function getSubscriber_users_id() {
