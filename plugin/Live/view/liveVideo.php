@@ -4,7 +4,6 @@ $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id'])
 ?>
 <link href="<?php echo $global['webSiteRootURL']; ?>plugin/Live/view/live.css" rel="stylesheet" type="text/css"/>
 <div class="row main-video" id="mvideo">
-    <div class="secC col-sm-8 col-md-9">
     <div class="secC col-sm-8 col-md-8">
         <div id="videoContainer">
             <div id="floatButtons" style="display: none;">
