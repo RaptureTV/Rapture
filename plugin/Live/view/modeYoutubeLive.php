@@ -279,6 +279,7 @@ echo PlayerSkins::getStartPlayerJS();
 <div class="col-md-12 watch8-action-buttons text-muted"></div>
                                 <div class="col-xs-4 col-md-5 col-sm-4 col-lg-6" ><?php echo $video['creator']; ?></div>
                                 <div class="col-xs-8 col-md-7 col-sm-8 col-lg-6" >
+                                    <?php echo $notifyicon ;   ?>
                          <a href="#" class="btn btn-default no-outline custom1" id="shareBtn">
                                                                                   
                          <i class="fas fa-share-alt"></i>
