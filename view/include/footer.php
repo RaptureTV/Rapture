@@ -34,14 +34,14 @@ if (empty($advancedCustom)) {
     }
     if (empty($custom)) {
         ?>
-        <ul class="list-inline">
+        <!-- <ul class="list-inline">
             <li>
                 Powered by <a href="http://www.avideo.com" class="external btn btn-outline btn-primary btn-xs" target="_blank" rel="noopener noreferrer">AVideo®</a> - <a href="http://platform.avideo.com" class="external btn btn-outline btn-primary btn-xs" target="_blank" rel="noopener noreferrer">A Video Platform v<?php echo $config->getVersion(); ?></a>
             </li>
             <li>
                 <a href="https://www.facebook.com/avideo/" class="external btn btn-outline btn-primary btn-xs" target="_blank" rel="noopener noreferrer"><span class="sr-only">Facebook</span><i class="fab fa-facebook-square"></i></a>
             </li>
-        </ul>
+        </ul> -->
         <?php
     } else {
         echo $custom;

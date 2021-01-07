@@ -274,6 +274,10 @@ echo PlayerSkins::getStartPlayerJS();
   }
   
 }
+body{
+    font-family: 'Rubik', sans-serif;
+
+}
 </style>
 
 <div class="col-md-12 watch8-action-buttons text-muted"></div>
