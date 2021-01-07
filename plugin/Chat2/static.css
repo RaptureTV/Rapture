@@ -1,6 +1,7 @@
 #yptchat2 {
     position: fixed !important;
     margin-bottom: 10px;
+    width: 24.5%;
     min-width: 200px !important;
 }
 .yptchat2Fade{
