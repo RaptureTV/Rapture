@@ -160,13 +160,13 @@ $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id'])
             </div>
         </div>
     </div>
-    <!-- <div class=" echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
+    <div class="<?php echo $modeYoutubeBottomClass2; ?> rightBar" id="yptRightBar">
                         <div class="list-group-item ">
-                           
+                            <?php
                             echo $sideAd;
                             ?>
                         </div>
-                    </div> -->
+                    </div>
 </div>
 <script>
 <?php
