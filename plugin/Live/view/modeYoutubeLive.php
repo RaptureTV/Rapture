@@ -271,8 +271,8 @@ echo PlayerSkins::getStartPlayerJS();
 }
 @media screen and (min-width: 1367px) {
   .custom1 {
-    margin-right: 4%;
-    margin-left : 3%;
+    margin-right: 1%;
+    margin-left : 5%;
   }
 }
 </style>
