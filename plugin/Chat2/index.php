@@ -211,7 +211,7 @@ echo "var credentialsE = '&{$credentials}';";
                 }
                 body<?php echo $hover; ?> .panel-default,
                 body<?php echo $hover; ?> .panel-footer{
-                    border-color: #ddd;
+                    border-color: #2f2f2f;
                 }
 
                 body<?php echo $hover; ?> .panel-footer{
