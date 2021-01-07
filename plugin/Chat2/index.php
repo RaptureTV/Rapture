@@ -490,7 +490,7 @@ echo "var credentialsE = '&{$credentials}';";
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="divChatInput">
                                         <input id="chatInput" maxlength="<?php echo $obj->charLimit; ?>" style="display: none;">
-                                        <button class="btn btn-block " id="submitChat">
+                                        <button class="btn btn-block custombt" id="submitChat">
                                             <i class="fas fa-paper-plane"></i>
                                         </button>
                                     </div>

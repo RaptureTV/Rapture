@@ -23,6 +23,14 @@ body .panel-footer{
     bottom: 0;
     left: 0;
 }
+.custombt{
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+    width: 15%;
+    
+}
+
 .emojionearea, .emojionearea-editor{
     font-size: 1.2em;
 }
