@@ -259,7 +259,7 @@ hgroup{
 }
 .emojionearea, .emojionearea.focused {
     border-width: 0;
-    background-color: transparent;
+    background-color: #222222;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
     box-shadow:none;
