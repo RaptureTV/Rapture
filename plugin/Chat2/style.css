@@ -25,6 +25,8 @@ body .panel-footer{
 }
 .custombt{
     float: right;
+    background-color: #31AB77;
+    color:white;
     margin-top: 15px;
     margin-right: 5px;
     width: 15%;
