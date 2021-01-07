@@ -99,7 +99,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
             margin-left: 10px;
         }
         body .panel-default, body .panel-footer{
-            border-color:#2f2f2f;
+            border-color:#2f2f2f !important;
         }
         </style>
     </head>
