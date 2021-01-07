@@ -112,7 +112,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
                 $('#onlineList').append(element);
                 listGroupItemClick();
             }
-            name = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + name + " : </a>";
+            name = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + name +  " : </a>";
         }
     }
     $(template).attr('id', 'bubble' + id);
