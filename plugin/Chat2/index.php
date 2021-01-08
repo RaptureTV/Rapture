@@ -255,6 +255,10 @@ echo "var credentialsE = '&{$credentials}';";
             .panel{
                 margin-bottom: 10px !important;
             }
+            .panel-heading img{
+                height:25px;
+                width:25px;
+            }
         </style>
     </head>
 
