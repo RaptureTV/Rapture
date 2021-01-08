@@ -96,6 +96,41 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     var template;
     if (isMe) {
         template = $('#me-bubble').clone();
+        if (from_users_id) {
+            if (!$("#chatItem" + from_users_id).length) {
+                var cssClass = "";
+                if (isBanned) {
+                    cssClass = "list-group-item-danger";
+                }
+                var element = '<li  class="list-group-item ' + cssClass + '" to_users_id="' + from_users_id + '" id="chatItem' + from_users_id + '" channelLink="">';
+                element += '<img src="' + webSiteRootURL + 'view/img/userSilhouette.jpg" class="img img-circle img-responsive pull-left">';
+                element += '<span class="NameIdentification hidden-xs">' + name + '</span>';
+                element += '<span class="badge" style="display: none;">0</span></li> ';
+                $('#onlineList').append(element);
+                listGroupItemClick();
+            }
+            name = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + name +  " : </a>";
+        }
+    }
+    $(template).attr('id', 'bubble' + id);
+    $(template).attr('message_id', id);
+    $(template).attr('users_id', from_users_id);
+    $(template).addClass('bubble' + from_users_id);
+    if (isBanned) {
+        $(template).addClass('banned');
+    }
+    $(template).find(".messageNameId").html(name);
+    $(template).find(".message").html(message);
+    // $(template).find(".messageFooter").html(messageFooter);
+    if (prepend) {
+        $('#chatScreen').prepend(template);
+    } else {
+        $('#chatScreen').append(template);
+        chatAutoscroll();
+    }
+    $('#bubble' + id).slideDown('fast');
+    messagesCount++;
+    return true;
         name = "";
     } else {
         template = $('#them-bubble').clone();
@@ -108,7 +143,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
                 var element = '<li  class="list-group-item ' + cssClass + '" to_users_id="' + from_users_id + '" id="chatItem' + from_users_id + '" channelLink="">';
                 element += '<img src="' + webSiteRootURL + 'view/img/userSilhouette.jpg" class="img img-circle img-responsive pull-left">';
                 element += '<span class="NameIdentification hidden-xs">' + name + '</span>';
-                element += '<span class="badge">0</span></li> ';
+                element += '<span class="badge" style="display: none;">0</span></li> ';
                 $('#onlineList').append(element);
                 listGroupItemClick();
             }
