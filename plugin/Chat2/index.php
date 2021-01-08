@@ -260,7 +260,7 @@ echo "var credentialsE = '&{$credentials}';";
                 width:25px;
             }
             .cust{
-                border-color:none;
+                border-color:transparent;
                 background-color:transparent;
                 color:white;
             }
