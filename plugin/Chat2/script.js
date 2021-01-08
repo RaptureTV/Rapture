@@ -108,7 +108,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
                 var element = '<li  class="list-group-item ' + cssClass + '" to_users_id="' + from_users_id + '" id="chatItem' + from_users_id + '" channelLink="">';
                 element += '<img src="' + webSiteRootURL + 'view/img/userSilhouette.jpg" class="img img-circle img-responsive pull-left">';
                 element += '<span class="NameIdentification hidden-xs">' + name + '</span>';
-                element += '<span class="badge" style="display: none;">0</span></li> ';
+                element += '<span class="badge">0</span></li> ';
                 $('#onlineList').append(element);
                 listGroupItemClick();
             }
