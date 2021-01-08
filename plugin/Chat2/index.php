@@ -271,6 +271,9 @@ echo "var credentialsE = '&{$credentials}';";
                 font-size:16px;
             
             }
+            .emojionearea.emojionearea-inline>.emojionearea-editor{
+                color:white;
+            }
         </style>
     </head>
 
