@@ -265,8 +265,10 @@ echo "var credentialsE = '&{$credentials}';";
                 color:white;
             }
             .custtext{
-                margin-left:28%;
+                margin-left:25%;
                 font-weight: bold;
+                color:white;
+                font-size:16px;
             
             }
         </style>
