@@ -306,8 +306,12 @@ echo "var credentialsE = '&{$credentials}';";
 
                             </div>
                             <!-- <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div> -->
-                           
-                                    <?php
+                            
+                            <?php
+                            if (empty($_GET['mobileMode'])) {
+                                ?>
+                                <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
+                                <?php
                                     $donationLink = $channelOwner->getDonationLinkIfEnabled();
                                     if (!empty($donationLink)) {
                                         ?>
@@ -335,15 +339,6 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
-                               
-                                <?php
-                            }
-                            ?>
-
-<?php
-                            if (empty($_GET['mobileMode'])) {
-                                ?>
-                                <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
                                     <div class="dropdown" style="float: left;">                                        
                                         <button class="btn  btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="
                                         <?php
@@ -461,8 +456,13 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
-                                    </div>
-                                    </div>
+                                   
+                                </div>
+                                <?php
+                            }
+                            ?>
+
+                        </div>
                         <div class="panel-body chat" id="divChatPanel" >
                             <div class="text-center">
                                 <a href="#" class="btn" onclick="loadMore()">Load more</a>
