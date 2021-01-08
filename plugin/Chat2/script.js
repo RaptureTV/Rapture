@@ -98,7 +98,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
        
         template = $('#me-bubble').clone();
         inme = "Testing";
-        $(template).find(".messageNameId").html(inme);
+        $(template).find(".messageNameId").html("inme");
 
        
     } else {
