@@ -312,7 +312,10 @@ body{
                                         <?php echo AVideoPlugin::getWatchActionButton(0); ?>
                                     </div> -->
                                 </div>
-                              
+                                <?php
+                                $link = Live::getLinkToLiveFromUsers_id($user_id);
+                                getShareMenu($liveTitle, $link, $link, $link .= "?embed=1");
+                                ?>
                                 <!-- <div class="row">
 
                                     <div class="col-lg-12 col-sm-12 col-xs-12 extraVideos nopadding"></div>
