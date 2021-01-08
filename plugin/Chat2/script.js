@@ -95,9 +95,9 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     getChatTimeOut = 3000;
     var template;
     if (isMe) {
+       
         template = $('#me-bubble').clone();
-        inme = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + isMe +  " : </a>";
-
+        inme = "fafa";
         $(template).find(".messageNameId").html(inme);
 
        
