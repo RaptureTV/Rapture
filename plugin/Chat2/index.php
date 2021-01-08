@@ -250,6 +250,7 @@ echo "var credentialsE = '&{$credentials}';";
             }
             .panel-default > .panel-heading{
                 background-color: #141414;
+                border-color:#2f2f2f;
             }
         </style>
     </head>
@@ -263,7 +264,7 @@ echo "var credentialsE = '&{$credentials}';";
                         ?>
                         <div class="panel panel-default top0Radius">
                             <div class="panel-heading top0Radius">
-                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left">                            
+                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left" >                            
                                 <div class="hidden-xs"><?php echo User::getNameIdentification(); ?></div>
                             </div>
                             <div class="panel-body" style="bottom: 0; padding: 0;">
@@ -301,11 +302,45 @@ echo "var credentialsE = '&{$credentials}';";
                     <div class="panel panel-default top0Radius" id="chatPanel">
                         <div class="panel-heading top0Radius">
                             <div class="pull-left" style="min-width: fit-content;">
-                                <img src="<?php echo $channelOwner->getPhotoDB(); ?>" class="img img-circle img-responsive pull-left" id="talkToImage"> 
+                                <!-- <img src="<?php echo $channelOwner->getPhotoDB(); ?>" class="img img-circle img-responsive pull-left" id="talkToImage">  -->
 
                             </div>
-                            <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div>
-                            <?php
+                            <!-- <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div> -->
+                           
+                                    <?php
+                                    $donationLink = $channelOwner->getDonationLinkIfEnabled();
+                                    if (!empty($donationLink)) {
+                                        ?>
+                                        <a class="btn btn-success" href="<?php echo $donationLink; ?>" target="_blank" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Donate'); ?>"
+                                           style="" id="donateButton">
+                                            <i class="fas fa-donate"></i>
+                                        </a>    
+                                        <?php
+                                    }
+                                    if (!empty($_GET['showCollapseButtons'])) {
+                                        ?>
+                                        <button id="chat2CollapseBtn" 
+                                                style="
+                                                border-top-right-radius: 4px;
+                                                border-bottom-right-radius: 4px;" 
+                                                class="btn btn-danger last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                        <button id="chat2ExpandBtn" 
+                                                style="
+                                                border-radius: 4px;
+                                                display: none;" class="btn btn-primary" type="button" onclick="expandChat2();" data-toggle="tooltip" data-placement="left"  title="<?php echo __('Open Chat'); ?>">
+                                            <i class="far fa-comment-dots"></i>
+                                        </button>
+                                        <?php
+                                    }
+                                    ?>
+                               
+                                <?php
+                            }
+                            ?>
+
+<?php
                             if (empty($_GET['mobileMode'])) {
                                 ?>
                                 <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
@@ -426,40 +461,8 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
-                                    <?php
-                                    $donationLink = $channelOwner->getDonationLinkIfEnabled();
-                                    if (!empty($donationLink)) {
-                                        ?>
-                                        <a class="btn btn-success" href="<?php echo $donationLink; ?>" target="_blank" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Donate'); ?>"
-                                           style="" id="donateButton">
-                                            <i class="fas fa-donate"></i>
-                                        </a>    
-                                        <?php
-                                    }
-                                    if (!empty($_GET['showCollapseButtons'])) {
-                                        ?>
-                                        <button id="chat2CollapseBtn" 
-                                                style="
-                                                border-top-right-radius: 4px;
-                                                border-bottom-right-radius: 4px;" 
-                                                class="btn btn-danger last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                        <button id="chat2ExpandBtn" 
-                                                style="
-                                                border-radius: 4px;
-                                                display: none;" class="btn btn-primary" type="button" onclick="expandChat2();" data-toggle="tooltip" data-placement="left"  title="<?php echo __('Open Chat'); ?>">
-                                            <i class="far fa-comment-dots"></i>
-                                        </button>
-                                        <?php
-                                    }
-                                    ?>
-                                </div>
-                                <?php
-                            }
-                            ?>
-
-                        </div>
+                                    </div>
+                                    </div>
                         <div class="panel-body chat" id="divChatPanel" >
                             <div class="text-center">
                                 <a href="#" class="btn" onclick="loadMore()">Load more</a>
