@@ -266,6 +266,9 @@ hgroup{
 #divChatRow #divRooms > div{
     display: none;
 }
+.panel-body{
+    height: 385px;
+}
 .emojionearea, .emojionearea.focused {
     border-width: 0;
     background-color: #222222;
