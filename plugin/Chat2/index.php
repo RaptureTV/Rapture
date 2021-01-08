@@ -264,6 +264,11 @@ echo "var credentialsE = '&{$credentials}';";
                 background-color:transparent;
                 color:white;
             }
+            .custtext{
+                margin-left:28%;
+                font-weight: bold;
+            
+            }
         </style>
     </head>
 
@@ -352,6 +357,7 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
+                                    <span class="custtext">Chat</span>
                                      <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
                                     <div class="dropdown" style="float: left;">                                        
                                         <button class="btn  btn-default cust dropdown-toggle" type="button" data-toggle="dropdown" style="
