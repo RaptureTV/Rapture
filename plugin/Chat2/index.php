@@ -248,6 +248,9 @@ echo "var credentialsE = '&{$credentials}';";
             .minimized{
                 width: 100%;
             }
+            .panel-default > .panel-heading{
+                background-color: #141414;
+            }
         </style>
     </head>
 
