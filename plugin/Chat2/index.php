@@ -310,7 +310,7 @@ echo "var credentialsE = '&{$credentials}';";
                             <?php
                             if (empty($_GET['mobileMode'])) {
                                 ?>
-                                <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
+                               
                                 <?php
                                     $donationLink = $channelOwner->getDonationLinkIfEnabled();
                                     if (!empty($donationLink)) {
@@ -339,6 +339,7 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
+                                     <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
                                     <div class="dropdown" style="float: left;">                                        
                                         <button class="btn  btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="
                                         <?php
