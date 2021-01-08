@@ -300,7 +300,7 @@ body{
                                             });
                                         </script>
                                         </a>
-                                        <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="far fa-star"></i> &nbsp&nbspSubscribe</button>
+                                        <button class="btn btn-m" style=" background-color:#3F3F3F;"><i class="far fa-star"></i> &nbspSubscribe</button>
                                         <?php echo $subscribe; ?>
                                 </div>
                                 <div class="col-md-12 watch8-action-buttons text-muted"></div>
