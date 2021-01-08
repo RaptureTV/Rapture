@@ -95,7 +95,9 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     getChatTimeOut = 3000;
     var template;
     if (isMe) {
-        // template = $('#me-bubble').clone();
+        template = $('#me-bubble').clone();
+        $(template).find(".messageNameId").html(name);
+
         name = "";
     } else {
         template = $('#them-bubble').clone();
