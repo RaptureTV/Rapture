@@ -96,9 +96,9 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     var template;
     if (isMe) {
         template = $('#me-bubble').clone();
-        name = "<a href='#' onclick='$(\"#chatItem\").trigger(\"click\");'>" + isMe +  " : </a>";
+        isme = "<a href='#' onclick='$(\"#chatItem\").trigger(\"click\");'>" + isMe +  " : </a>";
 
-        $(template).find(".messageNameId").html(name);
+        $(template).find(".messageNameId").html(isme);
 
        
     } else {
