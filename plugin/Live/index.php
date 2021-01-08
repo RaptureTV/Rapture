@@ -167,7 +167,7 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
                                 include $global['systemRootPath'] . 'plugin/Live/indexCol1.php';
                                 ?>
                             </div>
-                            <div class="<?php echo $col2Class; ?>" style="padding:0px;" id="yptRightBar">
+                            <div class="<?php echo $col2Class; ?>" style="padding:0px; display:none;" id="yptRightBar">
                                 <?php
                                 include $global['systemRootPath'] . 'plugin/Live/indexCol2.php';
                                 ?>
