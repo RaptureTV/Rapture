@@ -259,6 +259,11 @@ echo "var credentialsE = '&{$credentials}';";
                 height:25px;
                 width:25px;
             }
+            .cust{
+                border-color:none;
+                background-color:transparent;
+                color:white;
+            }
         </style>
     </head>
 
@@ -349,7 +354,7 @@ echo "var credentialsE = '&{$credentials}';";
                                     ?>
                                      <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
                                     <div class="dropdown" style="float: left;">                                        
-                                        <button class="btn  btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="
+                                        <button class="btn  btn-default cust dropdown-toggle" type="button" data-toggle="dropdown" style="
                                         <?php
                                         if (empty($obj->disableAttachments)) {
                                             ?>border-top-right-radius: 0;
