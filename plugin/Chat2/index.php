@@ -252,6 +252,9 @@ echo "var credentialsE = '&{$credentials}';";
                 background-color: #141414;
                 border-color:#2f2f2f;
             }
+            .panel{
+                margin-bottom: 10px !important;
+            }
         </style>
     </head>
 
@@ -326,9 +329,10 @@ echo "var credentialsE = '&{$credentials}';";
                                         <button id="chat2CollapseBtn" 
                                                 style="
                                                 border-top-right-radius: 4px;
-                                                border-bottom-right-radius: 4px;" 
-                                                class="btn btn-danger last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
-                                            <i class="fa fa-times"></i>
+                                                border-bottom-right-radius: 4px;
+                                                background-color: transparent" 
+                                                class="btn last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
+                                          <img src="http://157.230.2.203/VOD/view/img/click.png" height="15px" width="15px" />
                                         </button>
                                         <button id="chat2ExpandBtn" 
                                                 style="
