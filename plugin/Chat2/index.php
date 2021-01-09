@@ -771,7 +771,7 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chatPanel .btn').hide();
                         $('#chat2CollapseBtn').hide();
                         $('#chat2ExpandBtn').show();
-                        $('.secC').hide();
+                        $('#videoContainer').hide();
                         window.parent.collapseChat2();
                         Cookies.set('yptChat2Minimized', true, {
                             path: '/',
