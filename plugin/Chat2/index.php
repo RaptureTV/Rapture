@@ -772,6 +772,7 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chat2ExpandBtn').show();
                         $('.secC').css('width','95%');
                         $('#yptRightBar').css('width','5%');
+                        console.log("checking");
                         window.parent.collapseChat2();
                         Cookies.set('yptChat2Minimized', true, {
                             path: '/',
@@ -785,9 +786,10 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chatPanel .btn').show();
                         $('#chat2CollapseBtn').show();
                         $('#chat2ExpandBtn').hide();
-                        window.parent.expandChat2();
                         $('.secC').css('width','75%');
                         $('#yptRightBar').css('width','25%');
+                        window.parent.expandChat2();
+
                         Cookies.set('yptChat2Minimized', false, {
                             path: '/',
                             expires: 365
