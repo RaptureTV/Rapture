@@ -1,8 +1,8 @@
 <style>
     #yptchat2{
         position: fixed;
-        bottom: 0;
-        z-index: 1029; 
+        /* bottom: 0; */
+        z-index: 1029;
         -webkit-transition: opacity 0.3s ease-in-out;
         -moz-transition: opacity 0.3s ease-in-out;
         -ms-transition: opacity 0.3s ease-in-out;
@@ -10,7 +10,7 @@
         transition: opacity 0.3s ease-in-out;
     }
     #yptchat2.chat2Minimized{
-        height:50px !important; 
+        height:50px !important;
         width:50px !important;
         margin: 10px;
     }
@@ -21,36 +21,36 @@
         opacity: 0;
         filter: alpha(opacity=0);
     }
-    #yptchat2.chat2Collapsed, 
+    #yptchat2.chat2Collapsed,
     #yptchat2.chat2Collapsed iframe{
         height: 50px !important;
     }
 </style>
 <div id="yptchat2" style="display: none; padding: 0;" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
-    <iframe 
+    <iframe
         id="yptchat2Iframe"
-        src="{iframeURL}" 
-        frameborder="0" scrolling="no" title="chat widget" class="" 
+        src="{iframeURL}"
+        frameborder="0" scrolling="no" title="chat widget" class=""
         style="
-        outline: none; 
-        visibility: visible; 
-        resize: none; 
-        box-shadow: none; 
-        overflow: visible; 
-        background: none transparent; 
-        opacity: 1; 
-        padding: 0px; 
-        margin: 0px; 
-        transition-property: none; 
-        transform: none; 
-        width: 100%; 
-        z-index: 999999; 
-        cursor: auto; 
-        float: none; 
-        border-radius: unset; 
-        pointer-events: auto; 
-        display: block; 
-        height: calc(100% - 22px);"></iframe>
+        outline: none;
+        visibility: visible;
+        resize: none;
+        box-shadow: none;
+        overflow: visible;
+        background: none transparent;
+        opacity: 1;
+        padding: 0px;
+        margin: 0px;
+        transition-property: none;
+        transform: none;
+        width: 100%;
+        z-index: 999999;
+        cursor: auto;
+        float: none;
+        border-radius: unset;
+        pointer-events: auto;
+        display: block;
+        height: calc(100% - -50px);"></iframe>
 </div>
 <script>
     $(function () {
@@ -78,7 +78,7 @@
         $(".yptchat2Fade").fadeIn();
         expandChat2();
     }
-    
+
     function collapseChat2() {
         console.log('collapseChat2');
         $("#yptchat2").addClass('chat2Collapsed');

@@ -176,6 +176,9 @@ if (!$includeDefaultNavBar) {
             padding: 4px;
             width: 50%;
         }
+        #mainNavBar{
+            position: fixed;
+        }
         #mainNavBar .navbar-brand{
             width: 100% !important;
             text-align: center;

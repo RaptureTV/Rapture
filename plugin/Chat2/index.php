@@ -211,7 +211,7 @@ echo "var credentialsE = '&{$credentials}';";
                 }
                 body<?php echo $hover; ?> .panel-default,
                 body<?php echo $hover; ?> .panel-footer{
-                    border-color: #ddd;
+                    border-color: #2f2f2f;
                 }
 
                 body<?php echo $hover; ?> .panel-footer{
@@ -248,6 +248,32 @@ echo "var credentialsE = '&{$credentials}';";
             .minimized{
                 width: 100%;
             }
+            .panel-default > .panel-heading{
+                background-color: #141414;
+                border-color:#2f2f2f;
+            }
+            .panel{
+                margin-bottom: 10px !important;
+            }
+            .panel-heading img{
+                height:25px;
+                width:25px;
+            }
+            .cust{
+                border-color:transparent;
+                background-color:transparent;
+                color:white;
+            }
+            .custtext{
+                margin-left:25%;
+                font-weight: bold;
+                color:white;
+                font-size:16px;
+            
+            }
+            .emojionearea.emojionearea-inline>.emojionearea-editor{
+                color:white;
+            }
         </style>
     </head>
 
@@ -260,7 +286,7 @@ echo "var credentialsE = '&{$credentials}';";
                         ?>
                         <div class="panel panel-default top0Radius">
                             <div class="panel-heading top0Radius">
-                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left">                            
+                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left" >                            
                                 <div class="hidden-xs"><?php echo User::getNameIdentification(); ?></div>
                             </div>
                             <div class="panel-body" style="bottom: 0; padding: 0;">
@@ -289,25 +315,57 @@ echo "var credentialsE = '&{$credentials}';";
                                 </ul> 
                             </div>
                         </div>
-                        <button id="roomButton" class="btn btn-default btn-xs"><i class="fas fa-users"></i></button>
+                        <!-- <button id="roomButton" class="btn btn-default btn-xs"><i class="fas fa-users"></i></button> -->
                         <?php
                     }
                     ?>
                 </div>
                 <div class="<?php echo $chatClassCol2; ?>" style="padding: 0;" id="divChat">
                     <div class="panel panel-default top0Radius" id="chatPanel">
-                        <div class="panel-heading top0Radius" style="display: none;">
+                        <div class="panel-heading top0Radius">
                             <div class="pull-left" style="min-width: fit-content;">
-                                <img src="<?php echo $channelOwner->getPhotoDB(); ?>" class="img img-circle img-responsive pull-left" id="talkToImage"> 
+                                <!-- <img src="<?php echo $channelOwner->getPhotoDB(); ?>" class="img img-circle img-responsive pull-left" id="talkToImage">  -->
 
                             </div>
-                            <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div>
+                            <!-- <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div> -->
+                            
                             <?php
                             if (empty($_GET['mobileMode'])) {
                                 ?>
-                                <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
+                               
+                                <?php
+                                    $donationLink = $channelOwner->getDonationLinkIfEnabled();
+                                    if (!empty($donationLink)) {
+                                        ?>
+                                        <a class="btn btn-success" href="<?php echo $donationLink; ?>" target="_blank" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Donate'); ?>"
+                                           style="" id="donateButton">
+                                            <i class="fas fa-donate"></i>
+                                        </a>    
+                                        <?php
+                                    }
+                                    if (!empty($_GET['showCollapseButtons'])) {
+                                        ?>
+                                        <button id="chat2CollapseBtn" 
+                                                style="
+                                                border-top-right-radius: 4px;
+                                                border-bottom-right-radius: 4px;
+                                                background-color: transparent" 
+                                                class="btn last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
+                                          <img src="http://157.230.2.203/VOD/view/img/click.png" height="15px" width="15px" />
+                                        </button>
+                                        <button id="chat2ExpandBtn" 
+                                                style="
+                                                border-radius: 4px;
+                                                display: none;" class="btn btn-primary" type="button" onclick="expandChat2();" data-toggle="tooltip" data-placement="left"  title="<?php echo __('Open Chat'); ?>">
+                                            <i class="far fa-comment-dots"></i>
+                                        </button>
+                                        <?php
+                                    }
+                                    ?>
+                                    <span class="custtext">Chat</span>
+                                     <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
                                     <div class="dropdown" style="float: left;">                                        
-                                        <button class="btn  btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="
+                                        <button class="btn  btn-default cust dropdown-toggle" type="button" data-toggle="dropdown" style="
                                         <?php
                                         if (empty($obj->disableAttachments)) {
                                             ?>border-top-right-radius: 0;
@@ -423,34 +481,7 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
-                                    <?php
-                                    $donationLink = $channelOwner->getDonationLinkIfEnabled();
-                                    if (!empty($donationLink)) {
-                                        ?>
-                                        <a class="btn btn-success" href="<?php echo $donationLink; ?>" target="_blank" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Donate'); ?>"
-                                           style="" id="donateButton">
-                                            <i class="fas fa-donate"></i>
-                                        </a>    
-                                        <?php
-                                    }
-                                    if (!empty($_GET['showCollapseButtons'])) {
-                                        ?>
-                                        <button id="chat2CollapseBtn" 
-                                                style="
-                                                border-top-right-radius: 4px;
-                                                border-bottom-right-radius: 4px;" 
-                                                class="btn btn-danger last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                        <button id="chat2ExpandBtn" 
-                                                style="
-                                                border-radius: 4px;
-                                                display: none;" class="btn btn-primary" type="button" onclick="expandChat2();" data-toggle="tooltip" data-placement="left"  title="<?php echo __('Open Chat'); ?>">
-                                            <i class="far fa-comment-dots"></i>
-                                        </button>
-                                        <?php
-                                    }
-                                    ?>
+                                   
                                 </div>
                                 <?php
                             }
@@ -468,7 +499,7 @@ echo "var credentialsE = '&{$credentials}';";
                                 <i class="fas fa-angle-down"></i>
                             </button>
                         </div>
-                        <div class="panel-footer" style="height: 55px;" >
+                        <div class="panel-footer"  >
                             <?php
                             if (!User::isLogged()) {
                                 if (empty($_GET['mobileMode'])) {
@@ -488,13 +519,16 @@ echo "var credentialsE = '&{$credentials}';";
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10" id="divChatInput">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="divChatInput">
                                         <input id="chatInput" maxlength="<?php echo $obj->charLimit; ?>" style="display: none;">
-                                    </div>
-                                    <div class=" col-lg-1 col-md-2 col-sm-2 col-xs-2" id="divSubmitChat">
-                                        <button class="btn btn-block " id="submitChat">
-                                            <i class="fas fa-paper-plane"></i>
+                                        <button class="btn btn-block custombt" id="submitChat">
+                                            Send
                                         </button>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="divChatInput">
+                                    </div>
+                                    <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" id="divSubmitChat">
+                                       
                                     </div>
                                 </div>
 

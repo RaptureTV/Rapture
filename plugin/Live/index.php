@@ -89,6 +89,12 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
                 width: auto;
                 height: auto;
             }
+            .container-fluid{
+                background-color: #000000 !important;
+            }
+            .list-group-item{
+                display:none !important;
+            }
         </style>
     </head>
     <body class="<?php echo $global['bodyClass']; ?>">
@@ -161,7 +167,7 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
                                 include $global['systemRootPath'] . 'plugin/Live/indexCol1.php';
                                 ?>
                             </div>
-                            <div class="<?php echo $col2Class; ?>" id="yptRightBar">
+                            <div class="<?php echo $col2Class; ?>" style="padding:0px; display:none;" id="yptRightBar">
                                 <?php
                                 include $global['systemRootPath'] . 'plugin/Live/indexCol2.php';
                                 ?>

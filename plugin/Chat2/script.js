@@ -96,7 +96,6 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
     var template;
     if (isMe) {
         template = $('#me-bubble').clone();
-        name = "";
     } else {
         template = $('#them-bubble').clone();
         if (from_users_id) {
@@ -112,7 +111,7 @@ function addMessage(id, from_users_id, name, message, messageFooter, isMe, prepe
                 $('#onlineList').append(element);
                 listGroupItemClick();
             }
-            name = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + name + " : </a>";
+            name = "<a href='#' onclick='$(\"#chatItem" + from_users_id + "\").trigger(\"click\");'>" + name +  " : </a>";
         }
     }
     $(template).attr('id', 'bubble' + id);

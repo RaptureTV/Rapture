@@ -284,12 +284,14 @@ function subscribe(email, user_id) {
         success: function (response) {
             if (response.subscribe == "i") {
                 $('.subs' + user_id).removeClass("subscribed");
-                $('.subs' + user_id + ' b.text').text("Subscribe");
+                $('.subs' + user_id + ' b.text').text("Follow");
                 $('b.textTotal' + user_id).text(parseInt($('b.textTotal' + user_id).first().text()) - 1);
+                $('.notify2').hide();
             } else {
                 $('.subs' + user_id).addClass("subscribed");
-                $('.subs' + user_id + ' b.text').text("Subscribed");
+                $('.subs' + user_id + ' b.text').text("Followed");
                 $('b.textTotal' + user_id).text(parseInt($('b.textTotal' + user_id).first().text()) + 1);
+                $('.notify2').show();
             }
             $('#popover-content #subscribeEmail').val(email);
             $('.subscribeButton' + user_id).popover('hide');
