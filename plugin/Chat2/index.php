@@ -255,9 +255,6 @@ echo "var credentialsE = '&{$credentials}';";
             .panel{
                 margin-bottom: 10px !important;
             }
-            .secC{
-              display:none;
-            }
             .panel-heading img{
                 height:25px;
                 width:25px;
@@ -773,6 +770,7 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#divChat').addClass('minimized');
                         $('#chatPanel .btn').hide();
                         $('#chat2CollapseBtn').hide();
+                        $('#divChat').css('width','10%');
                         $('#chat2ExpandBtn').show();
                         window.parent.collapseChat2();
                         Cookies.set('yptChat2Minimized', true, {
