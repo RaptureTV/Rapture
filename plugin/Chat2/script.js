@@ -112,7 +112,7 @@ function addMessage(
     var template;
     if (isMe) {
         template = $("#me-bubble").clone();
-        name = "<a href='' >" + name + "</a>";
+        name = "<a href='' >" + name + " : &nbsp</a>";
         $(template).find(".messageNameId").html(name);
     } else {
         template = $("#them-bubble").clone();
@@ -148,7 +148,7 @@ function addMessage(
                 from_users_id +
                 '").trigger("click");\'>' +
                 name +
-                " : </a>";
+                " : &nbsp</a>";
         }
     }
     $(template).attr("id", "bubble" + id);

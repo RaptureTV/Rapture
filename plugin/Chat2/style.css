@@ -30,7 +30,7 @@ body .panel-footer{
     margin-top: 15px;
     margin-right: 20px;
     width: 15%;
-    
+
 }
 
 .emojionearea, .emojionearea-editor{
@@ -119,9 +119,9 @@ body .chat{
 
 .me-bubble {
     position: relative;
-    background: #0c0c0c;
+    background: #000000;
     border-radius: .4em;
-    float: right;
+    /* float: right; */
     clear: both;
     color:white;
 }
