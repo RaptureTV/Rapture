@@ -165,7 +165,7 @@ echo "var credentialsE = '&{$credentials}';";
                     <?php
                     if (empty($_GET['noFade'])) {
                         ?>
-                        -webkit-mask-image: -webkit-gradient(linear, left top, 
+                        -webkit-mask-image: -webkit-gradient(linear, left top,
                             left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
 
                         <?php
@@ -188,7 +188,7 @@ echo "var credentialsE = '&{$credentials}';";
                 }
 
                 .bubble{
-                    box-shadow: 2px 2px 10px black;   
+                    box-shadow: 2px 2px 10px black;
                 }
                 <?php
             }
@@ -201,9 +201,9 @@ echo "var credentialsE = '&{$credentials}';";
                     -webkit-mask-image: none;
                 }
 
-                #chatPanel, 
-                body<?php echo $hover; ?> .panel, 
-                body<?php echo $hover; ?> .panel-heading, 
+                #chatPanel,
+                body<?php echo $hover; ?> .panel,
+                body<?php echo $hover; ?> .panel-heading,
                 body<?php echo $hover; ?> #roomButton{
                     opacity: 1;
                     filter: alpha(opacity=100); /* For IE8 and earlier */
@@ -243,7 +243,7 @@ echo "var credentialsE = '&{$credentials}';";
             }
             ?>
             ul.list-group{
-                margin: 0;  
+                margin: 0;
             }
             .minimized{
                 width: 100%;
@@ -269,7 +269,7 @@ echo "var credentialsE = '&{$credentials}';";
                 font-weight: bold;
                 color:white;
                 font-size:16px;
-            
+
             }
             .emojionearea.emojionearea-inline>.emojionearea-editor{
                 color:white;
@@ -286,7 +286,7 @@ echo "var credentialsE = '&{$credentials}';";
                         ?>
                         <div class="panel panel-default top0Radius">
                             <div class="panel-heading top0Radius">
-                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left" >                            
+                                <img src="<?php echo User::getPhoto(); ?>" class="img img-circle img-responsive pull-left" >
                                 <div class="hidden-xs"><?php echo User::getNameIdentification(); ?></div>
                             </div>
                             <div class="panel-body" style="bottom: 0; padding: 0;">
@@ -310,9 +310,9 @@ echo "var credentialsE = '&{$credentials}';";
                                         }
                                     }
                                     ?>
-                                </ul> 
+                                </ul>
                                 <ul class="list-group" id="offlineList">
-                                </ul> 
+                                </ul>
                             </div>
                         </div>
                         <!-- <button id="roomButton" class="btn btn-default btn-xs"><i class="fas fa-users"></i></button> -->
@@ -328,11 +328,11 @@ echo "var credentialsE = '&{$credentials}';";
 
                             </div>
                             <!-- <div id="talkToNameId" class="pull-left"><?php echo empty($to_users_id) ? $channelOwner->getChannelName() : $channelOwner->getNameIdentificationBd(); ?></div> -->
-                            
+
                             <?php
                             if (empty($_GET['mobileMode'])) {
                                 ?>
-                               
+
                                 <?php
                                     $donationLink = $channelOwner->getDonationLinkIfEnabled();
                                     if (!empty($donationLink)) {
@@ -340,20 +340,20 @@ echo "var credentialsE = '&{$credentials}';";
                                         <a class="btn btn-success" href="<?php echo $donationLink; ?>" target="_blank" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Donate'); ?>"
                                            style="" id="donateButton">
                                             <i class="fas fa-donate"></i>
-                                        </a>    
+                                        </a>
                                         <?php
                                     }
                                     if (!empty($_GET['showCollapseButtons'])) {
                                         ?>
-                                        <button id="chat2CollapseBtn" 
+                                        <button id="chat2CollapseBtn"
                                                 style="
                                                 border-top-right-radius: 4px;
                                                 border-bottom-right-radius: 4px;
-                                                background-color: transparent" 
+                                                background-color: transparent"
                                                 class="btn last" type="button" onclick="collapseChat2();" data-toggle="tooltip" data-placement="bottom"  title="<?php echo __('Close'); ?>"                                            >
                                           <img src="http://157.230.2.203/VOD/view/img/click.png" height="15px" width="15px" />
                                         </button>
-                                        <button id="chat2ExpandBtn" 
+                                        <button id="chat2ExpandBtn"
                                                 style="
                                                 border-radius: 4px;
                                                 display: none;" class="btn btn-primary" type="button" onclick="expandChat2();" data-toggle="tooltip" data-placement="left"  title="<?php echo __('Open Chat'); ?>">
@@ -364,14 +364,14 @@ echo "var credentialsE = '&{$credentials}';";
                                     ?>
                                     <span class="custtext">Chat</span>
                                      <div class="btn-group" style="position: absolute; right: 15px; top: 8px; ">
-                                    <div class="dropdown" style="float: left;">                                        
+                                    <div class="dropdown" style="float: left;">
                                         <button class="btn  btn-default cust dropdown-toggle" type="button" data-toggle="dropdown" style="
                                         <?php
                                         if (empty($obj->disableAttachments)) {
                                             ?>border-top-right-radius: 0;
                                                     border-bottom-right-radius: 0; border-right-width: 0;<?php
                                                 }
-                                                ?>"   data-placement="bottom"  
+                                                ?>"   data-placement="bottom"
                                                 title="<?php echo __('Actions'); ?>">
                                             <i class="fas fa-ellipsis-v" ></i>
                                         </button>
@@ -395,7 +395,7 @@ echo "var credentialsE = '&{$credentials}';";
                                             ?>
                                             <li>
                                                 <a>
-                                                    <i class="fas fa-scroll"></i> 
+                                                    <i class="fas fa-scroll"></i>
                                                     <input type="checkbox" id="autoscroll" checked="checked"/>
                                                     <label for="autoscroll"><?php echo __('Auto Scroll'); ?></label>
                                                 </a>
@@ -481,7 +481,7 @@ echo "var credentialsE = '&{$credentials}';";
                                         <?php
                                     }
                                     ?>
-                                   
+
                                 </div>
                                 <?php
                             }
@@ -528,7 +528,7 @@ echo "var credentialsE = '&{$credentials}';";
                                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="divChatInput">
                                     </div>
                                     <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" id="divSubmitChat">
-                                       
+
                                     </div>
                                 </div>
 
@@ -770,6 +770,8 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chatPanel .btn').hide();
                         $('#chat2CollapseBtn').hide();
                         $('#chat2ExpandBtn').show();
+                        $('.secC').css('width','95%');
+                        $('#yptRightBar').css('width','5%');
                         window.parent.collapseChat2();
                         Cookies.set('yptChat2Minimized', true, {
                             path: '/',
@@ -784,6 +786,8 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chat2CollapseBtn').show();
                         $('#chat2ExpandBtn').hide();
                         window.parent.expandChat2();
+                        $('.secC').css('width','75%');
+                        $('#yptRightBar').css('width','25%');
                         Cookies.set('yptChat2Minimized', false, {
                             path: '/',
                             expires: 365
@@ -793,7 +797,7 @@ echo "var credentialsE = '&{$credentials}';";
                     <?php
                 }
                 ?>
-                $(function () {                    
+                $(function () {
                     if (typeof window.parent.isYptChat2Minimized === 'function' && window.parent.isYptChat2Minimized()) {
                         collapseChat2();
                     }
