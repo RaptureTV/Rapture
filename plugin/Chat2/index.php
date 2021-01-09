@@ -770,8 +770,8 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chatPanel .btn').hide();
                         $('#chat2CollapseBtn').hide();
                         $('#chat2ExpandBtn').show();
-                        $('.secC').css('width','95%');
-                        $('#yptRightBar').css('width','5%');
+                        $('.secC col-sm-8 col-md-9').removeClass('secC col-sm-8 col-md-9').addClass('secC col-sm-11 col-md-11');
+
                         console.log("checking");
                         window.parent.collapseChat2();
                         Cookies.set('yptChat2Minimized', true, {
@@ -786,8 +786,8 @@ echo "var credentialsE = '&{$credentials}';";
                         $('#chatPanel .btn').show();
                         $('#chat2CollapseBtn').show();
                         $('#chat2ExpandBtn').hide();
-                        $('.secC').css('width','75%');
-                        $('#yptRightBar').css('width','25%');
+                        $('.secC col-sm-11 col-md-11').removeClass('secC col-sm-11 col-md-11').addClass('secC col-sm-8 col-md-9');
+
                         window.parent.expandChat2();
 
                         Cookies.set('yptChat2Minimized', false, {
