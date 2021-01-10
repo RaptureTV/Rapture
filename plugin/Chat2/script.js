@@ -92,7 +92,6 @@ function addMessage(
     message,
     messageFooter,
     isMe,
-    emailVerified,
     prepend,
     isBanned
 ) {
@@ -144,16 +143,12 @@ function addMessage(
                 $("#onlineList").append(element);
                 listGroupItemClick();
             }
-            if (emailVerified) {
-                name =
-                    "<a href='#' onclick='$(\"#chatItem" +
-                    from_users_id +
-                    '").trigger("click");\'>' +
-                    name +
-                    " : &nbsp</a>";
-            } else {
-                name = "empty";
-            }
+            name =
+                "<a href='#' onclick='$(\"#chatItem" +
+                from_users_id +
+                '").trigger("click");\'>' +
+                name +
+                " : &nbsp</a>";
         }
     }
     $(template).attr("id", "bubble" + id);
@@ -358,7 +353,6 @@ function getRoom(room_users_id, lower_then_id, pleaseWait) {
                         item.name,
                         item.message,
                         item.created,
-                        item.emailVerified,
                         item.isMe,
                         lower_then_id && lower_then_id != "0",
                         item.isBanned
