@@ -291,8 +291,8 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                             }
                             $(document).ready(function () {
                                 if (inIframe()) {
-                                    // $("#mainNavBar").hide();
-                                    // $("body").css("padding-top", "0");
+                                    $("#mainNavBar").hide();
+                                    $("body").css("padding-top", "0");
                                 }
                                 $('#buttonMenu').on("click.sidebar", function (event) {
                                     event.stopPropagation();
