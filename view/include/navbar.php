@@ -25,7 +25,7 @@ if (isIframe() && !empty($_SESSION['noNavbar'])) {
         $params['noNavbar'] = "0";
         $new_query_string = http_build_query($params);
         ?>
-        <a href="<?php echo $actual_link, "?", $new_query_string; ?>" class="btn btn-default" style="position: absolute; right: 10px; top: 5px;"><i class="fas fa-bars"></i></a>    
+        <a href="<?php echo $actual_link, "?", $new_query_string; ?>" class="btn btn-default" style="position: absolute; right: 10px; top: 5px;"><i class="fas fa-bars"></i></a>
         <?php
     } else {
         echo '<style>body{padding-top:0;}</style>';
@@ -102,17 +102,17 @@ if (!$includeDefaultNavBar) {
     }
 
     #rightProfileButton{
-        padding: 0; 
-        margin-left: 5px; 
-        margin-right: 40px; 
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 40px;
         border: 0;
         background: none;
         background-color: transparent;
     }
 
     #rightLoginButton{
-        margin-left: 5px; 
-        margin-right: 40px; 
+        margin-left: 5px;
+        margin-right: 40px;
     }
 
     #navbarRegularButtons{
@@ -145,7 +145,7 @@ if (!$includeDefaultNavBar) {
             padding-left: 10px;
         }
         #rightLoginButton, #rightProfileButton{
-            margin-right: 5px; 
+            margin-right: 5px;
             margin-left: 0;
         }
 
@@ -291,8 +291,8 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                             }
                             $(document).ready(function () {
                                 if (inIframe()) {
-                                    $("#mainNavBar").hide();
-                                    $("body").css("padding-top", "0");
+                                    // $("#mainNavBar").hide();
+                                    // $("body").css("padding-top", "0");
                                 }
                                 $('#buttonMenu').on("click.sidebar", function (event) {
                                     event.stopPropagation();
@@ -355,8 +355,8 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                         ?>
                         <li>
                             <a class="navbar-brand" href="<?php echo User::getChannelLinkFromChannelName($_SESSION['channelName']); ?>" >
-                                <img src="<?php echo User::getPhoto($user['id']); ?>" alt="<?php echo User::getNameIdentificationById($user['id']); ?>" 
-                                     class="img img-circle " style="height: 33px; width: 33px; margin-right: 15px;"> 
+                                <img src="<?php echo User::getPhoto($user['id']); ?>" alt="<?php echo User::getNameIdentificationById($user['id']); ?>"
+                                     class="img img-circle " style="height: 33px; width: 33px; margin-right: 15px;">
                             </a>
                         </li>
                     <?php } ?>
@@ -450,7 +450,7 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                             }
                                             echo AVideoPlugin::getUploadMenuButton();
                                             ?>
-                                        </ul>     
+                                        </ul>
                                         <?php
                                     } else {
                                         ?>
@@ -544,11 +544,11 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                             <?php
                                             if (!empty($_COOKIE['user']) && !empty($_COOKIE['pass'])) {
                                                 ?>
-                                                <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>    
+                                                <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>    
+                                                <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>
                                                 <?php
                                             }
                                             ?>
@@ -595,8 +595,8 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                     if (User::isLogged()) {
                                         ?>
                                         <button type="button" class="btn btn-default dropdown-toggle navbar-btn pull-left btn-circle"  data-toggle="dropdown" id="rightProfileButton" style="padding:0;">
-                                            <img src="<?php echo User::getPhoto(); ?>" 
-                                                 style="width: 32px; height: 32px; max-width: 32px;"  
+                                            <img src="<?php echo User::getPhoto(); ?>"
+                                                 style="width: 32px; height: 32px; max-width: 32px;"
                                                  class="img img-responsive img-circle" alt="User Photo"
                                                  />
                                         </button>
@@ -623,17 +623,17 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                                         <?php
                                                         if (!empty($_COOKIE['user']) && !empty($_COOKIE['pass'])) {
                                                             ?>
-                                                            <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>    
+                                                            <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>
                                                             <?php
                                                         } else {
                                                             ?>
-                                                            <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>    
+                                                            <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>
                                                             <?php
                                                         }
                                                         ?>
                                                         <i class="fas fa-sign-out-alt"></i> <?php echo __("Sign out"); ?>
                                                     </a>
-                                                </li> 
+                                                </li>
                                                 <?php
                                             }
                                             ?>
@@ -663,7 +663,7 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                                     <span class="fas fa-play-circle"></span>
                                                     <?php echo __($advancedCustomUser->MyChannelLabel); ?>
                                                 </a>
-                                            </li>    
+                                            </li>
                                             <?php
                                             print AVideoPlugin::navBarProfileButtons();
 
@@ -808,11 +808,11 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                             <?php
                                             if (!empty($_COOKIE['user']) && !empty($_COOKIE['pass'])) {
                                                 ?>
-                                                <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>    
+                                                <i class="fas fa-lock text-muted" style="opacity: 0.2;"></i>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>    
+                                                <i class="fas fa-lock-open text-muted" style="opacity: 0.2;"></i>
                                                 <?php
                                             }
                                             ?>
@@ -869,7 +869,7 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
                                     </a>
 
                                 </div>
-                            </li>    
+                            </li>
                             <?php
                             print AVideoPlugin::navBarButtons();
 
@@ -1318,7 +1318,7 @@ if (!User::isLogged() && !empty($advancedCustomUser->userMustBeLoggedIn) && !emp
         echo $advancedCustom->underMenuBarHTMLCode->value;
     }
 } else if ($thisScriptFile["basename"] !== 'user.php' && empty($advancedCustom->disableNavbar)) {
-    
+
 }
 unset($_GET['parentsOnly']);
 ?>
