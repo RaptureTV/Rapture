@@ -112,7 +112,10 @@ function addMessage(
     var template;
     if (isMe) {
         template = $("#me-bubble").clone();
-        name = "<a href='' >" + name + " : &nbsp</a>";
+        name =
+            "<img src='http://157.230.2.203/VOD/view/img/verifyicon.png' style='height:30px;width:30px;'><a href='' >" +
+            name +
+            " : &nbsp</a>";
         $(template).find(".messageNameId").html(name);
     } else {
         template = $("#them-bubble").clone();
