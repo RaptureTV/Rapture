@@ -102,7 +102,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
             border-color:#2f2f2f !important;
         }
        
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 730px) {
 .hideonmob{
     display:none;
 }
