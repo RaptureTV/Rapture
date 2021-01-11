@@ -97,7 +97,7 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
                 
             }
             .bgWhite{
-                background-color:#000000;
+                background-color:black !important;
             }
         </style>
     </head>
