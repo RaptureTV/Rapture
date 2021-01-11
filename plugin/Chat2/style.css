@@ -119,7 +119,7 @@ body .chat{
 
 .me-bubble {
     position: relative;
-    background: #000000;
+    background: transparent;
     border-radius: .4em;
     /* float: right; */
     clear: both;
