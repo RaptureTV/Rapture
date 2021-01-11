@@ -117,6 +117,10 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+#videoContainer:hover{
+    width:200%;
+
+}
         </style>
     </head>
     <body class="<?php echo $global['bodyClass']; ?>">
