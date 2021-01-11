@@ -109,7 +109,7 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
 .hovercust:hover + .hideonmob{
     display:block;
 }
-html, body {margin: 0; height: 100%; overflow: hidden}
+/* html, body {margin: 0; height: 100%; overflow: hidden} */
 }
 
         </style>
