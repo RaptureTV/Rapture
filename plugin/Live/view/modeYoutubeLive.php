@@ -216,7 +216,7 @@ echo PlayerSkins::getStartPlayerJS();
                         ?>
 
                         <div class="panel" style="background-color: #000000 !important;">
-                            <div class="panel-body">
+                            <div class="panel-body hideonmob">
                                 <h1 itemprop="name">
                                     <?php
                                     if($lt->isAPrivateLive()){

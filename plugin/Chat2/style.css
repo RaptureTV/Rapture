@@ -303,6 +303,9 @@ hgroup{
     #roomButton{
         display: inline-block;
     }
+    .hideonmob{
+        display: none;
+    }
     #divChat{
         width: 100%;
     }
