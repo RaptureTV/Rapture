@@ -101,8 +101,8 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         .panel-footer{
             border-color:#2f2f2f !important;
         }
-        .hovercust:hover{
-            width:200%;
+        .hovercust:hover + .hideonmob{
+            display:none;
         }
 @media screen and (max-width: 430px) {
 .hideonmob{
