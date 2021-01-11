@@ -519,12 +519,15 @@ echo "var credentialsE = '&{$credentials}';";
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="divChatInput">
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="divChatInput">
                                         <input id="chatInput" maxlength="<?php echo $obj->charLimit; ?>" style="display: none;">
-                                        <button class="btn btn-block custombt" id="submitChat">
+                                        
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="divChatInput">
+                                    <button class="btn btn-block custombt" id="submitChat">
                                             Send
                                         </button>
-                                    </div>
+                                        </div>
                                    
                                 </div>
 
