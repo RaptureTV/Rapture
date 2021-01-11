@@ -287,6 +287,9 @@ hgroup{
     #divChatInput, #divSubmitChat{
         padding: 5px 1px;
     }
+    .panel-heading{
+        display: none;
+    }
     #divRooms{
         position: absolute;
         width: 75px;
