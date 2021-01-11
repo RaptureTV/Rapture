@@ -137,9 +137,9 @@ $_REQUEST['live_servers_id'] = Live::getLiveServersIdRequest();
 $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id']);
 ?>
 <link href="<?php echo $global['webSiteRootURL']; ?>plugin/Live/view/live.css" rel="stylesheet" type="text/css"/>
-<div class="row main-video hovercust" id="mvideo">
+<div class="row main-video" id="mvideo">
     <div class="secC col-sm-8 col-md-9" style="padding-right:1px;padding-left:1px;">
-        <div id="videoContainer">
+        <div id="videoContainer hovercust">
             <div id="floatButtons" style="display: none;">
                 <p class="btn btn-outline btn-xs move">
                     <i class="fas fa-expand-arrows-alt"></i>
