@@ -232,7 +232,6 @@ echo PlayerSkins::getStartPlayerJS();
                             <?php
                         }
                         ?>
-<div class="hideonmob">hey Hello</div>
                         <div class="panel" style="background-color: #000000 !important;">
                             <div class="panel-body">
                                 <h1 itemprop="name">
