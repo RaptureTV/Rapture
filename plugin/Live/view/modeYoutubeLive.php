@@ -101,8 +101,13 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
         .panel-footer{
             border-color:#2f2f2f !important;
         }
-        .hovercust:hover + .hideonmob{
+        .hideonmob{
             display:none;
+            position: absolute;
+
+        }
+        .hovercust:hover .hideonmob{
+            display:block;
         }
 @media screen and (max-width: 430px) {
 .hideonmob{
@@ -227,7 +232,7 @@ echo PlayerSkins::getStartPlayerJS();
                             <?php
                         }
                         ?>
-
+<div class="hideonmob">hey Hello</div>
                         <div class="panel" style="background-color: #000000 !important;">
                             <div class="panel-body hideonmob">
                                 <h1 itemprop="name">
