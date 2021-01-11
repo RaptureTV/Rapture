@@ -306,6 +306,9 @@ hgroup{
     #divChat{
         width: 100%;
     }
+    .panel-body{
+        display: none;
+    }
 }
 .messageFooter{
     display:none;
