@@ -5,7 +5,7 @@ $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id'])
 <link href="<?php echo $global['webSiteRootURL']; ?>plugin/Live/view/live.css" rel="stylesheet" type="text/css"/>
 <style>
 #videoContainer:hover{
-    width:200px;
+    width:200%;
 
 }
 </style>
