@@ -18,6 +18,7 @@ body .panel-footer{
     background-color: #0a0a0a !important;
 }
 .panel-footer {
+    padding: 0px 15px 23px 15px !important;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -27,7 +28,7 @@ body .panel-footer{
     float: right;
     background-color: #31AB77;
     color:white;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-right: 20px;
     width: 15%;
 
@@ -266,9 +267,7 @@ hgroup{
 #divChatRow #divRooms > div{
     display: none;
 }
-.panel-body{
-    height: 600px;
-}
+
 .emojionearea, .emojionearea.focused {
     border-width: 0;
     background-color: #222222;
