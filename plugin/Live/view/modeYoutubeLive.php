@@ -214,7 +214,13 @@ echo PlayerSkins::getStartPlayerJS();
                             <?php
                         }
                         ?>
-
+<style>
+@media screen and (max-width: 430px) {
+.hideonmob{
+    display:none;
+}
+}
+</style>
                         <div class="panel" style="background-color: #000000 !important;">
                             <div class="panel-body hideonmob">
                                 <h1 itemprop="name">
