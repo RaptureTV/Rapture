@@ -102,12 +102,12 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
             border-color:#2f2f2f !important;
         }
         .hideonmob{
-            display:none;
+            display:block;
             position: absolute;
 
         }
         .hovercust:hover .hideonmob{
-            display:block;
+            opacity : 0;
         }
 @media screen and (max-width: 430px) {
 .hideonmob{
@@ -234,7 +234,7 @@ echo PlayerSkins::getStartPlayerJS();
                         ?>
 <div class="hideonmob">hey Hello</div>
                         <div class="panel" style="background-color: #000000 !important;">
-                            <div class="panel-body hideonmob">
+                            <div class="panel-body">
                                 <h1 itemprop="name">
                                     <?php
                                     if($lt->isAPrivateLive()){
