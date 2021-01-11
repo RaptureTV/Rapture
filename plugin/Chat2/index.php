@@ -272,7 +272,7 @@ echo "var credentialsE = '&{$credentials}';";
 
             }
             ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 /* Track */
