@@ -94,6 +94,9 @@ if (!empty($chat2) && !empty($chat2->useStaticLayout)) {
             }
             .list-group-item{
                 display:none !important;
+                
+            }
+            .bgWhite{
                 background-color:#000000;
             }
         </style>
