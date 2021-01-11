@@ -113,7 +113,7 @@ function addMessage(
     if (isMe) {
         template = $("#me-bubble").clone();
         name =
-            "<img src='http://157.230.2.203/VOD/view/img/verifyicon.png' style='height:30px;width:30px;'><a href='' >" +
+            "<img src='http://157.230.2.203/VOD/view/img/verifyicon.png' style='height:15px;width:15px;'><a href='' >" +
             name +
             " : &nbsp</a>";
         $(template).find(".messageNameId").html(name);
@@ -147,7 +147,7 @@ function addMessage(
                 listGroupItemClick();
             }
             name =
-                "<img src='http://157.230.2.203/VOD/view/img/verifyicon.png' style='height:30px;width:30px;'><a href='#' onclick='$(\"#chatItem" +
+                "<img src='http://157.230.2.203/VOD/view/img/verifyicon.png' style='height:15px;width:15px;'><a href='#' onclick='$(\"#chatItem" +
                 from_users_id +
                 '").trigger("click");\'>' +
                 name +
