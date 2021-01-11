@@ -106,6 +106,9 @@ if(empty($sideAd) && !AVideoPlugin::loadPluginIfEnabled("Chat2")){
 .hideonmob{
     display:none;
 }
+.hovercust:hover + .hideonmob{
+    display:block;
+}
 html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
@@ -134,7 +137,7 @@ $poster = Live::getPosterImage($livet['users_id'], $_REQUEST['live_servers_id'])
 <link href="<?php echo $global['webSiteRootURL']; ?>plugin/Live/view/live.css" rel="stylesheet" type="text/css"/>
 <div class="row main-video" id="mvideo">
     <div class="secC col-sm-8 col-md-9" style="padding-right:1px;padding-left:1px;">
-        <div id="videoContainer">
+        <div id="videoContainer" class="hovercust">
             <div id="floatButtons" style="display: none;">
                 <p class="btn btn-outline btn-xs move">
                     <i class="fas fa-expand-arrows-alt"></i>
